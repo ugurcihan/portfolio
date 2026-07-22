@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uğur Cihan Çekiç — Founder &amp; Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style-a.css">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<div class="grain"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">UC<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#about">Hakkımda</a>
+      <a href="#projects">Projeler</a>
+      <a href="#stack">Teknoloji</a>
+      <a href="#contact">İletişim</a>
+    </div>
+    <a href="#contact" class="nav-cta">Konuşalım</a>
+  </div>
+</nav>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow"><span class="pulse"></span> Aktif olarak fikir üretiyor ve yazılım inşa ediyorum</p>
+        <h1>Merhaba, ben <span class="grad">Uğur Cihan Çekiç</span></h1>
+        <p class="subtitle">Fikirleri çalışan ürünlere dönüştüren bir <strong>kurucu &amp; full-stack geliştirici</strong>im.
+        AI destekli araçlarla (Claude Code dahil) SaaS'tan mobil uygulamalara, marka lansmanlarından
+        kod denetim ajanlarına kadar uçtan uca ürünler tasarlıyor ve inşa ediyorum.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Projelerimi Gör</a>
+          <a href="#contact" class="btn btn-ghost">İletişime Geç</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Aktif proje</span></div>
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Yayınlanmış uygulama</span></div>
+          <div class="stat"><span class="stat-num">AI-first</span><span class="stat-label">Geliştirme yaklaşımı</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="avatar-ring">
+          <div class="avatar-frame">
+            <img src="assets/profile.png" alt="Uğur Cihan Çekiç" class="avatar-img" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="avatar-fallback">
+              <span>UC</span>
+            </div>
+          </div>
+          <div class="orbit-icon icon-bulb" style="--delay:0s">💡</div>
+          <div class="orbit-icon icon-code" style="--delay:2s">&lt;/&gt;</div>
+          <div class="orbit-icon icon-check" style="--delay:4s">✓</div>
+        </div>
+
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="tdot r"></span><span class="tdot y"></span><span class="tdot g"></span>
+            <span class="terminal-title">whoami.sh</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> <span class="type-line" data-text="whoami"></span></p>
+            <p class="out">&gt; Uğur Cihan Çekiç — Founder / Full-Stack Dev</p>
+            <p><span class="prompt">$</span> <span class="type-line" data-text="cat status.txt"></span></p>
+            <p class="out">&gt; building the future, one commit at a time_<span class="cursor">▍</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="section-head">
+      <span class="tag">01 · Hakkımda</span>
+      <h2>Kod yazan bir girişimci, girişimci gibi düşünen bir geliştirici</h2>
+    </div>
+    <div class="about-grid">
+      <p class="about-text">
+        Bir problemi gördüğümde ilk sorduğum soru "bunu nasıl inşa ederim" oluyor. Fuar/etkinlik yönetiminden
+        sağlık farkındalığına, kod denetiminden mobiliteye kadar farklı alanlarda ürünler tasarlıyor,
+        bunları gerçek kullanıcılara ulaştırmak için App Store'a kadar götürüyorum. Modern AI araçlarını
+        (Claude Code başta olmak üzere) sadece kod yazmak için değil, fikirden lansmana kadar tüm süreci
+        hızlandırmak için kullanıyorum.
+      </p>
+      <div class="about-cards">
+        <div class="mini-card">
+          <h3>Ürün Odaklı</h3>
+          <p>Her satır kod bir kullanıcı problemine cevap veriyor. Önce fikir netleşir, sonra kod yazılır.</p>
+        </div>
+        <div class="mini-card">
+          <h3>AI-Native Geliştirme</h3>
+          <p>Claude Code ile tasarım, backend, mobil ve QA süreçlerini tek başıma uçtan uca yürütüyorum.</p>
+        </div>
+        <div class="mini-card">
+          <h3>Uçtan Uca Sahiplik</h3>
+          <p>Kod, tasarım, marka tescili, App Store süreçleri, hukuki uyum — hepsini kendim yönetiyorum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="section-head">
+      <span class="tag">02 · Projeler</span>
+      <h2>Üzerinde çalıştığım / çalıştığım şeyler</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card featured">
+        <div class="project-top">
+          <span class="project-icon">🎪</span>
+          <span class="project-status live">Aktif</span>
+        </div>
+        <h3>KuExpo</h3>
+        <p class="project-tagline">AI destekli B2B2C fuar yönetim platformu</p>
+        <p class="project-desc">Organizatörlere ücretsiz, katılımcı firmalara kullanım bazlı fiyatlandırmayla çalışan
+        fuar &amp; etkinlik yönetim SaaS'ı. Web platformu, mobil uygulama ve marka altyapısıyla uçtan uca bir ürün.</p>
+        <div class="tags"><span>Next.js</span><span>Supabase</span><span>SaaS</span></div>
+      </article>
+
+      <article class="project-card featured">
+        <div class="project-top">
+          <span class="project-icon">🐛</span>
+          <span class="project-status live">Aktif</span>
+        </div>
+        <h3>The Bug</h3>
+        <p class="project-tagline">AI destekli kod denetim ajanı</p>
+        <p class="project-desc">Deterministik kanıt + LLM doğrulamalı bulguları harmanlamadan sunan bir kod denetim CLI'ı.
+        Şirketlerin 7/24 kullanabileceği, ince detayları ve zincirleme yan etkileri yakalayan bir yazılım denetçisi.</p>
+        <div class="tags"><span>CLI</span><span>LLM</span><span>DevTools</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">🚑</span>
+          <span class="project-status">Geliştiriliyor</span>
+        </div>
+        <h3>LifeCheck Mobility</h3>
+        <p class="project-tagline">Mobilite &amp; acil durum farkındalık uygulaması</p>
+        <p class="project-desc">Kullanıcıların hareketlilik ve acil durum ihtiyaçlarını merkezileştiren mobil uygulama projesi.</p>
+        <div class="tags"><span>Mobile</span><span>Flutter</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">🍺</span>
+          <span class="project-status">Geliştiriliyor</span>
+        </div>
+        <h3>SoberStat</h3>
+        <p class="project-tagline">Sosyal alkol tüketimi &amp; sağlık farkındalık uygulaması</p>
+        <p class="project-desc">Kullanıcıların tüketim alışkanlıklarını takip edip sağlık farkındalığı kazanmasını
+        hedefleyen bir mobil uygulama.</p>
+        <div class="tags"><span>Mobile</span><span>Health</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">🎨</span>
+          <span class="project-status">Yayında</span>
+        </div>
+        <h3>myartauthentic</h3>
+        <p class="project-tagline">Sanat eserleri için dijital doğrulama web sitesi</p>
+        <p class="project-desc">Sanat eserlerinin özgünlüğünü doğrulamaya yönelik web platformu.</p>
+        <div class="tags"><span>Web</span><span>HTML/CSS</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">🐆</span>
+          <span class="project-status live">Yayında</span>
+        </div>
+        <h3>Panther Carry</h3>
+        <p class="project-tagline">Premium ortamlar için insan destekli taşıma &amp; asistanlık hizmeti</p>
+        <p class="project-desc">AVM, havalimanı ve etkinlik gibi kalabalık ortamlarda; araç değil, profesyonel ve
+        sağduyulu bir insan desteği sunan hizmet konsepti.</p>
+        <div class="tags"><span>Concept</span><span>Service Design</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">🛗</span>
+          <span class="project-status">Yayında</span>
+        </div>
+        <h3>Cenova Media</h3>
+        <p class="project-tagline">Prestijli lokasyonlarda asansör içi reklamcılık</p>
+        <p class="project-desc">Rezidans, ofis ve prestijli site asansörlerinde marka reklamı yayınlayan bir
+        medya/reklam ağı. Cenovamedia.com üzerinden kurumsal iş birlikleri ve reklam kampanyaları yönetiliyor.</p>
+        <div class="tags"><span>AdTech</span><span>Web</span><span>B2B</span></div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-top">
+          <span class="project-icon">💬</span>
+          <span class="project-status">Deneysel</span>
+        </div>
+        <h3>AI Chatbot</h3>
+        <p class="project-tagline">Next.js tabanlı AI sohbet uygulaması</p>
+        <p class="project-desc">LLM entegrasyonlarını denemek ve prototip üretmek için kullanılan Next.js altyapılı
+        sohbet arayüzü.</p>
+        <div class="tags"><span>Next.js</span><span>AI SDK</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="stack" class="stack">
+    <div class="section-head">
+      <span class="tag">03 · Teknoloji</span>
+      <h2>Nasıl inşa ediyorum</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-item"><span>⚛️</span>Next.js / React</div>
+      <div class="stack-item"><span>🗄️</span>Supabase / Postgres</div>
+      <div class="stack-item"><span>📱</span>Flutter / iOS</div>
+      <div class="stack-item"><span>▲</span>Vercel</div>
+      <div class="stack-item"><span>🤖</span>Claude Code</div>
+      <div class="stack-item"><span>🔒</span>Auth &amp; Güvenlik</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="contact-inner">
+      <span class="tag">04 · İletişim</span>
+      <h2>Bir fikrin mi var, yoksa birlikte mi çalışalım?</h2>
+      <p>Yeni projeler, iş birlikleri veya sadece merhaba demek için ulaşabilirsin.</p>
+      <a href="mailto:ugurcihancekic@gmail.com" class="btn btn-primary big">ugurcihancekic@gmail.com</a>
+      <div class="socials">
+        <a href="https://github.com/ugurcihan" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Uğur Cihan Çekiç. Claude Code ile tasarlandı.</p>
+  </footer>
+
+</main>
+
+<script src="script-a.js"></script>
+</body>
+</html>

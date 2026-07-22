@@ -1,0 +1,156 @@
+const translations = {
+  en: {
+    page_title: "Ugur Cihan Cekic — Founder &amp; Full-Stack Developer",
+    hero_name: "Ugur Cihan Cekic",
+    nav_logo: "Ugur Cihan ✎",
+    footer_name: "Ugur Cihan Cekic",
+    nav_about: "About",
+    nav_projects: "Projects",
+    nav_stack: "Stack",
+    nav_contact: "Contact",
+
+    hero_greeting: "hi, I'm 👋",
+    hero_role: "Founder &amp; Full-Stack Developer",
+    hero_subtitle: "I turn ideas into working products — coffee, code, and a bit of stubbornness. ✨",
+    btn_projects: "See My Projects",
+    btn_contact: "Say Hello 👋",
+
+    about_title: "About Me",
+    about_text: "I build products end to end — from a rough idea to something real people actually use. Over the past few years I've shipped a management SaaS for trade fairs (KuExpo), an automated code-audit agent for developers (The Bug), health and mobility apps, and an iOS app live on the App Store. I work across the whole stack myself — design, backend, mobile, and the unglamorous parts like QA and compliance. I care about shipping things that work, not demos.",
+    mini1: "Product-minded 🎯",
+    mini2: "End-to-end execution 🚀",
+    mini3: "Cross-platform: Web, iOS, Android 📱",
+
+    projects_title: "My Projects",
+
+    p1_tagline: "AI-powered B2B2C fair management platform",
+    p1_desc: "A SaaS for managing trade fairs &amp; events — free for organizers, usage-based pricing for exhibiting companies.",
+    p2_tagline: "Automated code-audit agent for developers",
+    p2_desc: "A CLI that surfaces proof-backed, verified findings instead of blending them with guesses.",
+    p3_tagline: "Mobility &amp; emergency-awareness app",
+    p3_desc: "A mobile app centralizing users' mobility and emergency needs.",
+    p4_tagline: "Social drinking &amp; health-awareness app",
+    p4_desc: "A mobile app that helps people track consumption habits and build health awareness.",
+    p5_tagline: "Digital authentication site for artworks",
+    p5_desc: "A web platform for verifying the authenticity of art pieces.",
+    p6_tagline: "Human-assisted carrying &amp; concierge service for premium spaces",
+    p6_desc: "A service concept offering professional, discreet human support in malls, airports, and events.",
+    p7_tagline: "In-elevator advertising for prestigious locations",
+    p7_desc: "A media/ad network running brand campaigns inside residence, office, and premium-building elevators.",
+    p8_tagline: "Next.js-based AI chat application",
+    p8_desc: "A Next.js chat interface built to prototype and experiment with LLM integrations.",
+    p9_title: "Confidential Work",
+    p9_tagline: "NDA-protected client projects",
+    p9_desc: "Some of the products I've built live under client confidentiality agreements and can't be listed here — happy to walk through specifics in a conversation.",
+
+    stack_title: "How I Build",
+    stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
+    grp_lang: "Languages",
+    grp_mobile: "Mobile",
+    grp_web: "Web &amp; Backend",
+    grp_tools: "Tools &amp; Workflow",
+    grp_ai: "Security &amp; AI",
+    b_ios: "🍎 iOS (live on the App Store)",
+    b_android: "🤖 Android (on Google Play)",
+    b_restapi: "🔗 REST &amp; GraphQL APIs",
+    b_testing: "🧪 Automated Testing (Playwright)",
+    b_uxdesign: "🎯 Product &amp; UX Design",
+    b_auth: "🔒 Auth &amp; Security",
+    b_sysdesign: "📐 System Design",
+    b_llm: "🧠 LLM Integrations",
+
+    contact_title: "Got an idea? 💭",
+    contact_text: "Reach out for new projects, collaborations, or just to say hi.",
+
+    footer_text: "Built with coffee and code ☕"
+  },
+  tr: {
+    page_title: "Uğur Cihan Çekiç — Kurucu ve Full-Stack Geliştirici",
+    hero_name: "Uğur Cihan Çekiç",
+    nav_logo: "Uğur Cihan ✎",
+    footer_name: "Uğur Cihan Çekiç",
+    nav_about: "Hakkımda",
+    nav_projects: "Projeler",
+    nav_stack: "Teknoloji",
+    nav_contact: "İletişim",
+
+    hero_greeting: "merhaba, ben 👋",
+    hero_role: "Kurucu ve Full-Stack Geliştirici",
+    hero_subtitle: "Fikirleri çalışan ürünlere dönüştürüyorum — kahve, kod ve biraz inatla. ✨",
+    btn_projects: "Projelerimi Gör",
+    btn_contact: "Merhaba De 👋",
+
+    about_title: "Hakkımda",
+    about_text: "Fikirden gerçek kullanıcıya ulaşan bir ürüne kadar tüm süreci ben yürütüyorum. Son birkaç yılda bir fuar yönetim SaaS'ı (KuExpo), geliştiriciler için otomatik bir kod denetim ajanı (The Bug), sağlık ve mobilite uygulamaları ve App Store'da yayınlanmış bir iOS uygulaması çıkardım. Tasarımdan backend'e, mobil geliştirmeden QA ve uyumluluk gibi göz önünde olmayan işlere kadar her şeyi kendim yürütüyorum. Beni ilgilendiren demo değil, gerçekten çalışan şeyler ortaya koymak.",
+    mini1: "Ürün odaklı düşünürüm 🎯",
+    mini2: "Uçtan uca geliştirme 🚀",
+    mini3: "Çoklu platform: Web, iOS, Android 📱",
+
+    projects_title: "Projelerim",
+
+    p1_tagline: "AI destekli B2B2C fuar yönetim platformu",
+    p1_desc: "Organizatörlere ücretsiz, firmalara kullanım bazlı fiyatlandırmayla çalışan fuar &amp; etkinlik yönetim SaaS'ı.",
+    p2_tagline: "Geliştiriciler için otomatik kod denetim ajanı",
+    p2_desc: "Tahminle harmanlamadan, kanıta dayalı ve doğrulanmış bulgular sunan bir kod denetim CLI'ı.",
+    p3_tagline: "Mobilite &amp; acil durum farkındalık uygulaması",
+    p3_desc: "Kullanıcıların hareketlilik ve acil durum ihtiyaçlarını merkezileştiren mobil uygulama.",
+    p4_tagline: "Sosyal alkol tüketimi &amp; sağlık farkındalık uygulaması",
+    p4_desc: "Tüketim alışkanlıklarını takip edip sağlık farkındalığı kazandıran mobil uygulama.",
+    p5_tagline: "Sanat eserleri için dijital doğrulama sitesi",
+    p5_desc: "Sanat eserlerinin özgünlüğünü doğrulamaya yönelik web platformu.",
+    p6_tagline: "Premium ortamlar için insan destekli taşıma hizmeti",
+    p6_desc: "AVM, havalimanı ve etkinliklerde profesyonel ve sağduyulu bir insan desteği sunan hizmet konsepti.",
+    p7_tagline: "Prestijli lokasyonlarda asansör içi reklamcılık",
+    p7_desc: "Rezidans, ofis ve prestijli site asansörlerinde marka reklamı yayınlayan bir medya/reklam ağı.",
+    p8_tagline: "Next.js tabanlı AI sohbet uygulaması",
+    p8_desc: "LLM entegrasyonlarını denemek için kullanılan Next.js altyapılı sohbet arayüzü.",
+    p9_title: "Gizli Projeler",
+    p9_tagline: "NDA kapsamındaki müşteri projeleri",
+    p9_desc: "Geliştirdiğim bazı ürünler müşteri gizlilik sözleşmeleri kapsamında olduğu için burada detaylandıramıyorum — konuşurken detaylarını paylaşabilirim.",
+
+    stack_title: "Nasıl İnşa Ediyorum",
+    stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",
+    grp_lang: "Diller",
+    grp_mobile: "Mobil",
+    grp_web: "Web &amp; Backend",
+    grp_tools: "Araçlar &amp; İş Akışı",
+    grp_ai: "Güvenlik &amp; AI",
+    b_ios: "🍎 iOS (App Store'da yayında)",
+    b_android: "🤖 Android (Google Play'de)",
+    b_restapi: "🔗 REST ve GraphQL API'leri",
+    b_testing: "🧪 Otomatik Test (Playwright)",
+    b_uxdesign: "🎯 Ürün &amp; UX Tasarımı",
+    b_auth: "🔒 Auth &amp; Güvenlik",
+    b_sysdesign: "📐 Sistem Tasarımı",
+    b_llm: "🧠 LLM Entegrasyonları",
+
+    contact_title: "Bir fikrin mi var? 💭",
+    contact_text: "Yeni projeler, iş birlikleri veya sadece merhaba demek için ulaşabilirsin.",
+
+    footer_text: "Kahve ve kodla yapıldı ☕"
+  }
+};
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  if (translations[lang].page_title) {
+    document.title = translations[lang].page_title.replace(/&amp;/g, '&');
+  }
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key] !== undefined) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyLanguage('en');
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+});

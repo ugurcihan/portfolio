@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ugur Cihan Cekic — Founder &amp; Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<span class="doodle d1">01</span>
+<span class="doodle d2">{ }</span>
+<span class="doodle d3">10</span>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo" data-i18n="nav_logo">Ugur Cihan ✎</a>
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#projects" data-i18n="nav_projects">Projects</a>
+      <a href="#stack" data-i18n="nav_stack">Stack</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="tr">TR</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <section id="top" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="handwritten-tag" data-i18n="hero_greeting">hi, I'm 👋</p>
+        <h1 data-i18n="hero_name">Ugur Cihan Cekic</h1>
+        <p class="role" data-i18n="hero_role">Founder &amp; Full-Stack Developer</p>
+        <p class="subtitle" data-i18n="hero_subtitle">I turn ideas into working products — coffee, code, and a bit of stubbornness. ✨</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-coral" data-i18n="btn_projects">See My Projects</a>
+          <a href="#contact" class="btn btn-outline" data-i18n="btn_contact">Say Hello 👋</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="sticky-avatar">
+          <div class="avatar-frame">
+            <img src="assets/profile.png" alt="Uğur Cihan Çekiç" class="avatar-img" onerror="this.parentElement.classList.add('no-photo')">
+            <div class="avatar-fallback">UC</div>
+          </div>
+        </div>
+        <span class="bulb-doodle">💡</span>
+        <span class="check-doodle">✓ ✓ ✓</span>
+        <span class="code-doodle">&lt;/&gt;</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2 class="section-title" data-i18n="about_title">About Me</h2>
+    <div class="about-grid">
+      <p class="about-text" data-i18n="about_text">About text loading…</p>
+      <div class="reveal sticky-mini yellow" data-i18n="mini1">Product-minded 🎯</div>
+      <div class="reveal sticky-mini teal" data-i18n="mini2">End-to-end execution 🚀</div>
+      <div class="reveal sticky-mini coral" data-i18n="mini3">Cross-platform: Web, iOS, Android 📱</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2 class="section-title" data-i18n="projects_title">My Projects</h2>
+    <div class="project-grid">
+
+      <article class="reveal sticky yellow r1"><span class="pin">📌</span>
+        <span class="icon">🎪</span><h3>KuExpo</h3>
+        <p class="tagline" data-i18n="p1_tagline">AI-powered B2B2C fair management platform</p>
+        <p class="desc" data-i18n="p1_desc">desc</p>
+        <p class="tags">#nextjs #supabase #saas</p>
+      </article>
+
+      <article class="reveal sticky coral r2"><span class="pin">📌</span>
+        <span class="icon">🐛</span><h3>The Bug</h3>
+        <p class="tagline" data-i18n="p2_tagline">Automated code-audit agent for developers</p>
+        <p class="desc" data-i18n="p2_desc">desc</p>
+        <p class="tags">#cli #devtools #automation</p>
+      </article>
+
+      <article class="reveal sticky teal r1"><span class="pin">📌</span>
+        <span class="icon">🚑</span><h3>LifeCheck Mobility</h3>
+        <p class="tagline" data-i18n="p3_tagline">Mobility &amp; emergency-awareness app</p>
+        <p class="desc" data-i18n="p3_desc">desc</p>
+        <p class="tags">#mobile #flutter</p>
+      </article>
+
+      <article class="reveal sticky yellow r2"><span class="pin">📌</span>
+        <span class="icon">🍺</span><h3>SoberStat</h3>
+        <p class="tagline" data-i18n="p4_tagline">Social drinking &amp; health-awareness app</p>
+        <p class="desc" data-i18n="p4_desc">desc</p>
+        <p class="tags">#mobile #health</p>
+      </article>
+
+      <article class="reveal sticky coral r1"><span class="pin">📌</span>
+        <span class="icon">🎨</span><h3>myartauthentic</h3>
+        <p class="tagline" data-i18n="p5_tagline">Digital authentication site for artworks</p>
+        <p class="desc" data-i18n="p5_desc">desc</p>
+        <p class="tags">#web</p>
+      </article>
+
+      <article class="reveal sticky teal r2"><span class="pin">📌</span>
+        <span class="icon">🐆</span><h3>Panther Carry</h3>
+        <p class="tagline" data-i18n="p6_tagline">Human-assisted carrying &amp; concierge service for premium spaces</p>
+        <p class="desc" data-i18n="p6_desc">desc</p>
+        <p class="tags">#concept</p>
+      </article>
+
+      <article class="reveal sticky yellow r1"><span class="pin">📌</span>
+        <span class="icon">🛗</span><h3>Cenova Media</h3>
+        <p class="tagline" data-i18n="p7_tagline">In-elevator advertising for prestigious locations</p>
+        <p class="desc" data-i18n="p7_desc">desc</p>
+        <p class="tags">#adtech</p>
+      </article>
+
+      <article class="reveal sticky coral r2"><span class="pin">📌</span>
+        <span class="icon">💬</span><h3>AI Chatbot</h3>
+        <p class="tagline" data-i18n="p8_tagline">Next.js-based AI chat application</p>
+        <p class="desc" data-i18n="p8_desc">desc</p>
+        <p class="tags">#nextjs #aisdk</p>
+      </article>
+
+      <article class="reveal sticky confidential r1">
+        <span class="stamp">CONFIDENTIAL</span>
+        <span class="icon">🔒</span><h3 data-i18n="p9_title">Confidential Work</h3>
+        <p class="tagline" data-i18n="p9_tagline">NDA-protected client projects</p>
+        <p class="desc" data-i18n="p9_desc">desc</p>
+        <p class="tags">#nda #confidential</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="stack" class="stack">
+    <h2 class="section-title" data-i18n="stack_title">How I Build</h2>
+    <p class="stack-intro" data-i18n="stack_intro">intro</p>
+
+    <div class="stack-groups">
+      <div class="reveal stack-group">
+        <h4 data-i18n="grp_lang">Languages</h4>
+        <div class="stack-row">
+          <span class="badge">🐍 Python</span>
+          <span class="badge">🟨 JavaScript / TypeScript</span>
+          <span class="badge">🐦 Swift</span>
+          <span class="badge">🤖 Kotlin</span>
+          <span class="badge">🗃️ SQL</span>
+          <span class="badge">📟 Bash / Shell</span>
+        </div>
+      </div>
+      <div class="reveal stack-group">
+        <h4 data-i18n="grp_mobile">Mobile</h4>
+        <div class="stack-row">
+          <span class="badge">📱 Flutter</span>
+          <span class="badge" data-i18n="b_ios">🍎 iOS (live on the App Store)</span>
+          <span class="badge" data-i18n="b_android">🤖 Android (on Google Play)</span>
+        </div>
+      </div>
+      <div class="reveal stack-group">
+        <h4 data-i18n="grp_web">Web &amp; Backend</h4>
+        <div class="stack-row">
+          <span class="badge">⚛️ Next.js / React</span>
+          <span class="badge">🟢 Node.js</span>
+          <span class="badge">🗄️ Supabase / Postgres</span>
+          <span class="badge">🔥 Firebase</span>
+          <span class="badge" data-i18n="b_restapi">🔗 REST &amp; GraphQL APIs</span>
+          <span class="badge">🐳 Docker</span>
+          <span class="badge">▲ Vercel</span>
+        </div>
+      </div>
+      <div class="reveal stack-group">
+        <h4 data-i18n="grp_tools">Tools &amp; Workflow</h4>
+        <div class="stack-row">
+          <span class="badge">🧰 VS Code</span>
+          <span class="badge">🔧 Git &amp; CI/CD</span>
+          <span class="badge" data-i18n="b_testing">🧪 Automated Testing (Playwright)</span>
+          <span class="badge" data-i18n="b_sysdesign">📐 System Design</span>
+        </div>
+      </div>
+      <div class="reveal stack-group">
+        <h4 data-i18n="grp_ai">Security &amp; AI</h4>
+        <div class="stack-row">
+          <span class="badge" data-i18n="b_auth">🔒 Auth &amp; Security</span>
+          <span class="badge" data-i18n="b_llm">🧠 LLM Integrations</span>
+          <span class="badge" data-i18n="b_uxdesign">🎯 Product &amp; UX Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="reveal postcard">
+      <h2 data-i18n="contact_title">Got an idea? 💭</h2>
+      <p data-i18n="contact_text">Reach out for new projects, collaborations, or just to say hi.</p>
+      <a href="mailto:ugurcihancekic@gmail.com" class="btn btn-coral big">ugurcihancekic@gmail.com</a>
+      <p class="social"><a href="https://github.com/ugurcihan" target="_blank" rel="noopener">GitHub</a></p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> <span data-i18n="footer_name">Ugur Cihan Cekic</span> — <span data-i18n="footer_text">Built with coffee and code ☕</span></p>
+  </footer>
+
+</main>
+
+<script src="i18n.js"></script>
+<script src="interactions.js"></script>
+</body>
+</html>
