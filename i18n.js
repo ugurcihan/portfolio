@@ -42,6 +42,10 @@ const translations = {
     p9_title: "Confidential Work",
     p9_tagline: "NDA-protected client projects",
     p9_desc: "Some of the products I've built live under client confidentiality agreements and can't be listed here — happy to walk through specifics in a conversation.",
+    p10_tagline: "AI-powered review-reply SaaS for local businesses",
+    p10_desc: "Connects a business's Google profile and drafts on-brand AI replies to customer reviews — nothing sends without owner approval.",
+    p11_tagline: "iOS photo &amp; video editing app with on-device effects",
+    p11_desc: "SwiftUI app with a Node/TypeScript backend for auth and storage — all photo/video processing runs on-device, not server-side.",
 
     stack_title: "How I Build",
     stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
@@ -107,6 +111,10 @@ const translations = {
     p9_title: "Gizli Projeler",
     p9_tagline: "NDA kapsamındaki müşteri projeleri",
     p9_desc: "Geliştirdiğim bazı ürünler müşteri gizlilik sözleşmeleri kapsamında olduğu için burada detaylandıramıyorum — konuşurken detaylarını paylaşabilirim.",
+    p10_tagline: "Yerel işletmeler için AI destekli yorum yanıt SaaS'ı",
+    p10_desc: "İşletmenin Google Business profilini bağlar, marka tonuna uygun AI yanıt taslakları üretir — onay olmadan hiçbir yanıt otomatik gönderilmez.",
+    p11_tagline: "Cihaz üzerinde efekt işleyen iOS fotoğraf &amp; video uygulaması",
+    p11_desc: "Auth ve depolama için Node/TypeScript backend'i olan SwiftUI uygulaması — tüm fotoğraf/video işleme cihaz üzerinde çalışır, sunucuda değil.",
 
     stack_title: "Nasıl İnşa Ediyorum",
     stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",
