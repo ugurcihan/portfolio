@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ugurcekic.vercel.app/sitemap.xml
+Sitemap: https://ugurcihancekic.com/sitemap.xml
