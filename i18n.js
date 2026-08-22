@@ -66,7 +66,6 @@ const translations = {
     contact_title: "Got an idea? 💭",
     contact_text: "Reach out for new projects, collaborations, or just to say hi.",
     btn_github: "GitHub",
-    btn_resume: "📄 Resume",
 
     footer_text: "Built with coffee and code ☕"
   },
@@ -137,7 +136,6 @@ const translations = {
     contact_title: "Bir fikrin mi var? 💭",
     contact_text: "Yeni projeler, iş birlikleri veya sadece merhaba demek için ulaşabilirsin.",
     btn_github: "GitHub",
-    btn_resume: "📄 Özgeçmiş",
 
     footer_text: "Kahve ve kodla yapıldı ☕"
   }
