@@ -65,10 +65,42 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalFrames = parseInt(canvas.dataset.frames, 10);
   const ctx = canvas.getContext('2d');
   const sprite = new Image();
+  sprite.decoding = 'async';
+  // Decorative, non-LCP asset (canvas isn't an LCP candidate and is
+  // aria-hidden) — hint the browser to fetch it after higher-priority
+  // resources like fonts and CSS.
+  if ('fetchPriority' in sprite) sprite.fetchPriority = 'low';
   let spriteReady = false;
   let frameW = 0, frameH = 0;
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Ambient background: fetched lazily (idle/after-load) instead of on
+  // first paint, since it's a fixed decorative layer that only becomes
+  // visible near the end of the hero scroll (or immediately, but still
+  // non-critical, under prefers-reduced-motion). Tries WebP first and
+  // falls back to JPEG automatically if no WebP file has been published.
+  let ambientBgRequested = false;
+  function loadAmbientBg() {
+    if (ambientBgRequested || !ambientBg) return;
+    ambientBgRequested = true;
+    const base = 'assets/server-bg';
+    const applyBg = (ext) => {
+      ambientBg.style.backgroundImage =
+        `linear-gradient(rgba(23,19,15,0.88), rgba(23,19,15,0.88)), url('${base}.${ext}')`;
+    };
+    const probe = new Image();
+    probe.onload = () => applyBg('webp');
+    probe.onerror = () => applyBg('jpg');
+    probe.src = `${base}.webp`;
+  }
+  function scheduleAmbientBg() {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadAmbientBg, { timeout: 3000 });
+    } else {
+      window.addEventListener('load', loadAmbientBg, { once: true });
+    }
+  }
 
   function resizeCanvas() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -109,7 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
     currentFrame = targetFrame;
     drawFrame(currentFrame);
   };
-  sprite.src = canvas.dataset.sprite;
+
+  // Prefer a WebP version of the sprite sheet (much smaller at this
+  // resolution) if one has been published alongside the JPEG; fall back
+  // to the original JPEG automatically if it 404s or the browser can't
+  // decode it. Drop hero-sprite.webp next to hero-sprite.jpg to activate —
+  // no further code changes needed.
+  const jpgSrc = canvas.dataset.sprite;
+  const webpSrc = jpgSrc.replace(/\.jpe?g$/i, '.webp');
+  sprite.onerror = () => {
+    if (sprite.src.indexOf(webpSrc) !== -1 && sprite.src.indexOf(jpgSrc) === -1) {
+      sprite.onerror = null;
+      sprite.src = jpgSrc;
+    }
+  };
+  sprite.src = webpSrc !== jpgSrc ? webpSrc : jpgSrc;
+
+  scheduleAmbientBg();
 
   if (reduceMotion) {
     wrapper.classList.add('reduced-motion');

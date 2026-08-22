@@ -52,9 +52,13 @@ main, .nav { position: relative; z-index: 1; }
 
 .ambient-bg {
   position: fixed; inset: 0; z-index: 0;
-  background:
-    linear-gradient(rgba(23,19,15,0.88), rgba(23,19,15,0.88)),
-    url('assets/server-bg.jpg') center/cover no-repeat;
+  background-color: transparent;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-image is injected by JS (interactions.js) once the browser
+     is idle / after load, instead of being fetched eagerly on first paint.
+     This keeps the initial request queue free for fonts/CSS/hero sprite. */
   opacity: 0;
   transition: opacity 1.2s ease;
   pointer-events: none;
@@ -241,7 +245,7 @@ section:not(.hero) { padding: 30px 0; }
 /* STACK */
 .stack-intro { color: var(--dim); font-size: 1.02rem; max-width: 640px; margin-bottom: 36px; }
 .stack-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-.stack-group h4 {
+.stack-group h3 {
   font-family: var(--hand); font-size: 1.35rem; color: var(--coral);
   margin-bottom: 14px; transform: rotate(-1deg);
 }
