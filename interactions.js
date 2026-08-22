@@ -19,6 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if (!toggle || !links) return;
+
+  function closeMenu() {
+    toggle.classList.remove('open');
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  links.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const targets = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

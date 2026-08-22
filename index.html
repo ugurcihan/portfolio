@@ -62,15 +62,20 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="#top" class="logo" aria-label="Ugur Cihan Cekic">01010101<span class="logo-blink">_</span><span class="logo-type" data-full="01000011"></span></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#about" data-i18n="nav_about">About</a>
       <a href="#projects" data-i18n="nav_projects">Projects</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </div>
-    <div class="lang-switch">
-      <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸</button>
-      <button class="lang-btn" data-lang="tr" aria-label="Türkçe">🇹🇷</button>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸</button>
+        <button class="lang-btn" data-lang="tr" aria-label="Türkçe">🇹🇷</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>

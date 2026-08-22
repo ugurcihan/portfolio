@@ -62,7 +62,7 @@ main, .nav { position: relative; z-index: 1; }
 .ambient-bg.visible { opacity: 1; }
 
 /* NAV */
-.nav { padding: 20px 32px; }
+.nav { padding: 20px 32px; position: relative; z-index: 20; }
 .nav-inner {
   max-width: 1140px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
@@ -76,6 +76,16 @@ main, .nav { position: relative; z-index: 1; }
 .nav-links { display: flex; gap: 26px; }
 .nav-links a { color: var(--dim); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 .nav-links a:hover { color: var(--coral); }
+.nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-toggle {
+  display: none; flex-direction: column; justify-content: center; gap: 5px;
+  width: 40px; height: 40px; border: 2px solid var(--ink); border-radius: 10px;
+  background: var(--surface); cursor: pointer; padding: 0;
+}
+.nav-toggle span { width: 18px; height: 2px; background: var(--ink); margin: 0 auto; transition: transform .2s, opacity .2s; }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 .lang-switch { display: flex; border: 2px solid var(--ink); border-radius: 999px; overflow: hidden; }
 .lang-btn {
@@ -262,9 +272,16 @@ section:not(.hero) { padding: 30px 0; }
 .footer { text-align: center; padding: 34px; color: var(--dim); font-size: 0.85rem; font-weight: 600; }
 
 @media (max-width: 780px) {
-  .hero-inner { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .about-text { grid-row: auto; }
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none; flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--surface); border-bottom: 2px solid var(--ink);
+    padding: 8px 32px 16px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 0; border-top: 1px solid rgba(245,236,217,0.1); }
   .doodle { display: none; }
 }
