@@ -57,7 +57,9 @@
 </head>
 <body>
 
-<div class="ambient-bg" id="ambientBg"></div>
+<div class="ambient-bg" id="ambientBg" aria-hidden="true"></div>
+
+<div id="langAnnouncer" class="sr-only" role="status" aria-live="polite"></div>
 
 <span class="doodle d1">01</span>
 <span class="doodle d2">{ }</span>
@@ -74,8 +76,8 @@
     </div>
     <div class="nav-right">
       <div class="lang-switch">
-        <button class="lang-btn active" data-lang="en" aria-label="English">🇺🇸</button>
-        <button class="lang-btn" data-lang="tr" aria-label="Türkçe">🇹🇷</button>
+        <button class="lang-btn active" data-lang="en" aria-label="English" aria-pressed="true">🇺🇸</button>
+        <button class="lang-btn" data-lang="tr" aria-label="Türkçe" aria-pressed="false">🇹🇷</button>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
@@ -122,71 +124,71 @@
     <h2 class="section-title" data-i18n="projects_title">My Projects</h2>
     <div class="project-grid">
 
-      <article class="reveal sticky yellow r1"><span class="pin">📌</span>
-        <span class="icon">🎪</span><h3>KuExpo</h3>
+      <article class="reveal sticky yellow r1"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🎪</span><h3>KuExpo</h3>
         <p class="tagline" data-i18n="p1_tagline">AI-powered B2B2C fair management platform</p>
         <p class="desc" data-i18n="p1_desc">desc</p>
         <p class="tags">#nextjs #supabase #saas</p>
       </article>
 
-      <article class="reveal sticky coral r2"><span class="pin">📌</span>
-        <span class="icon">🐛</span><h3>The Bug</h3>
+      <article class="reveal sticky coral r2"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🐛</span><h3>The Bug</h3>
         <p class="tagline" data-i18n="p2_tagline">Automated code-audit agent for developers</p>
         <p class="desc" data-i18n="p2_desc">desc</p>
         <p class="tags">#cli #devtools #automation</p>
       </article>
 
-      <article class="reveal sticky teal r1"><span class="pin">📌</span>
-        <span class="icon">🚑</span><h3>LifeCheck Mobility</h3>
+      <article class="reveal sticky teal r1"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🚑</span><h3>LifeCheck Mobility</h3>
         <p class="tagline" data-i18n="p3_tagline">Mobility &amp; emergency-awareness app</p>
         <p class="desc" data-i18n="p3_desc">desc</p>
         <p class="tags">#mobile #flutter</p>
       </article>
 
-      <article class="reveal sticky yellow r2"><span class="pin">📌</span>
-        <span class="icon">🍺</span><h3>SoberStat</h3>
+      <article class="reveal sticky yellow r2"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🍺</span><h3>SoberStat</h3>
         <p class="tagline" data-i18n="p4_tagline">Social drinking &amp; health-awareness app</p>
         <p class="desc" data-i18n="p4_desc">desc</p>
         <p class="tags">#mobile #health</p>
       </article>
 
-      <article class="reveal sticky coral r1"><span class="pin">📌</span>
-        <span class="icon">🎨</span><h3>myartauthentic</h3>
+      <article class="reveal sticky coral r1"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🎨</span><h3>myartauthentic</h3>
         <p class="tagline" data-i18n="p5_tagline">Digital authentication site for artworks</p>
         <p class="desc" data-i18n="p5_desc">desc</p>
         <p class="tags">#web</p>
       </article>
 
-      <article class="reveal sticky teal r2"><span class="pin">📌</span>
-        <span class="icon">🐆</span><h3>Panther Carry</h3>
+      <article class="reveal sticky teal r2"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🐆</span><h3>Panther Carry</h3>
         <p class="tagline" data-i18n="p6_tagline">Human-assisted carrying &amp; concierge service for premium spaces</p>
         <p class="desc" data-i18n="p6_desc">desc</p>
         <p class="tags">#concept</p>
       </article>
 
-      <article class="reveal sticky yellow r1"><span class="pin">📌</span>
-        <span class="icon">🛗</span><h3>Cenova Media</h3>
+      <article class="reveal sticky yellow r1"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">🛗</span><h3>Cenova Media</h3>
         <p class="tagline" data-i18n="p7_tagline">In-elevator advertising for prestigious locations</p>
         <p class="desc" data-i18n="p7_desc">desc</p>
         <p class="tags">#adtech</p>
       </article>
 
-      <article class="reveal sticky coral r2"><span class="pin">📌</span>
-        <span class="icon">💬</span><h3>AI Chatbot</h3>
+      <article class="reveal sticky coral r2"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">💬</span><h3>AI Chatbot</h3>
         <p class="tagline" data-i18n="p8_tagline">Next.js-based AI chat application</p>
         <p class="desc" data-i18n="p8_desc">desc</p>
         <p class="tags">#nextjs #aisdk</p>
       </article>
 
-      <article class="reveal sticky teal r2"><span class="pin">📌</span>
-        <span class="icon">⭐</span><h3>ReviewMaster TR</h3>
+      <article class="reveal sticky teal r2"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">⭐</span><h3>ReviewMaster TR</h3>
         <p class="tagline" data-i18n="p10_tagline">AI-powered review-reply SaaS for local businesses</p>
         <p class="desc" data-i18n="p10_desc">desc</p>
         <p class="tags">#saas #ai #nextjs</p>
       </article>
 
-      <article class="reveal sticky yellow r1"><span class="pin">📌</span>
-        <span class="icon">📸</span><h3>Fotoshop</h3>
+      <article class="reveal sticky yellow r1"><span class="pin" aria-hidden="true">📌</span>
+        <span class="icon" aria-hidden="true">📸</span><h3>Fotoshop</h3>
         <p class="tagline" data-i18n="p11_tagline">iOS photo &amp; video editing app with on-device effects</p>
         <p class="desc" data-i18n="p11_desc">desc</p>
         <p class="tags">#ios #swiftui #backend</p>
@@ -194,7 +196,7 @@
 
       <article class="reveal sticky confidential r2">
         <span class="stamp">CONFIDENTIAL</span>
-        <span class="icon">🔒</span><h3 data-i18n="p9_title">Confidential Work</h3>
+        <span class="icon" aria-hidden="true">🔒</span><h3 data-i18n="p9_title">Confidential Work</h3>
         <p class="tagline" data-i18n="p9_tagline">NDA-protected client projects</p>
         <p class="desc" data-i18n="p9_desc">desc</p>
         <p class="tags">#nda #confidential</p>

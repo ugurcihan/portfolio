@@ -120,7 +120,7 @@ main { max-width: 1140px; margin: 0 auto; padding: 0 32px; }
   transition: transform .2s, box-shadow .2s;
   display: inline-block;
 }
-.btn-coral { background: var(--coral); color: white; box-shadow: 4px 4px 0 var(--ink); animation: glow-pulse 2.6s ease-in-out infinite; }
+.btn-coral { background: var(--coral); color: var(--ink-dark); box-shadow: 4px 4px 0 var(--ink); animation: glow-pulse 2.6s ease-in-out infinite; }
 .btn-coral:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 var(--ink); animation-play-state: paused; }
 @keyframes glow-pulse {
   0%,100% { box-shadow: 4px 4px 0 var(--ink), 0 0 0 rgba(255,122,92,0); }
@@ -197,8 +197,8 @@ section:not(.hero) { padding: 30px 0; }
   border: 2px solid var(--ink); box-shadow: 4px 4px 0 var(--ink);
 }
 .sticky-mini.yellow { background: var(--yellow); color: var(--ink-dark); transform: rotate(-2deg); }
-.sticky-mini.teal { background: var(--teal); color: white; transform: rotate(1.5deg); }
-.sticky-mini.coral { background: var(--coral); color: white; transform: rotate(-1deg); }
+.sticky-mini.teal { background: var(--teal); color: var(--ink-dark); transform: rotate(1.5deg); }
+.sticky-mini.coral { background: var(--coral); color: var(--ink-dark); transform: rotate(-1deg); }
 
 /* PROJECTS */
 .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
@@ -216,8 +216,8 @@ section:not(.hero) { padding: 30px 0; }
 @keyframes wiggle-1 { 0%,100% { transform: rotate(-1.5deg); } 50% { transform: rotate(-0.5deg); } }
 @keyframes wiggle-2 { 0%,100% { transform: rotate(1.5deg); } 50% { transform: rotate(0.5deg); } }
 .sticky.yellow { background: var(--yellow); color: var(--ink-dark); }
-.sticky.coral { background: var(--coral); color: white; }
-.sticky.teal { background: var(--teal); color: white; }
+.sticky.coral { background: var(--coral); color: var(--ink-dark); }
+.sticky.teal { background: var(--teal); color: var(--ink-dark); }
 .pin { position: absolute; top: -14px; left: 16px; font-size: 1.4rem; }
 
 .sticky.confidential {
@@ -288,4 +288,28 @@ section:not(.hero) { padding: 30px 0; }
   .nav-links.open { display: flex; }
   .nav-links a { padding: 12px 0; border-top: 1px solid rgba(245,236,217,0.1); }
   .doodle { display: none; }
+}
+
+/* Visually-hidden but screen-reader-accessible content */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Respect the OS/browser-level reduced-motion preference everywhere,
+   not just the scroll-scrubbed hero: kills the infinite decorative
+   loops (bg-drift, doodle sway, logo blink, button glow, sticky
+   wiggle, scroll hint float) and the .reveal scroll-in transition. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }

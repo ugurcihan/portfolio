@@ -153,14 +153,30 @@ function applyLanguage(lang) {
     }
   });
   document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   });
 }
 
+const langAnnouncements = {
+  en: 'Language switched to English.',
+  tr: 'Dil Türkçe olarak değiştirildi.'
+};
+
 document.addEventListener('DOMContentLoaded', () => {
   applyLanguage('en');
+  const announcer = document.getElementById('langAnnouncer');
   document.querySelectorAll('.lang-btn').forEach((btn) => {
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    btn.addEventListener('click', () => {
+      applyLanguage(btn.dataset.lang);
+      // Only announce on user-triggered switches, not the initial load above —
+      // innerHTML swaps are silent to screen readers otherwise (no reload,
+      // no focus change), so confirm the switch happened via a live region.
+      if (announcer) {
+        announcer.textContent = langAnnouncements[btn.dataset.lang] || '';
+      }
+    });
   });
   document.getElementById('year').textContent = new Date().getFullYear();
 });

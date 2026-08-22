@@ -23,19 +23,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const links = document.getElementById('navLinks');
   if (!toggle || !links) return;
 
-  function closeMenu() {
+  function closeMenu(returnFocus) {
     toggle.classList.remove('open');
     links.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    if (returnFocus) toggle.focus();
   }
 
   toggle.addEventListener('click', () => {
     const isOpen = links.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
+    // nav-links sits before nav-toggle in the DOM (needed so it lays out
+    // between the logo and the lang/menu controls on desktop), which means
+    // a keyboard user who reaches the toggle and opens the menu can never
+    // Tab forward into the now-visible links — forward Tab only ever moves
+    // later in the DOM, and there's nothing after the toggle. Move focus
+    // into the panel directly so opening it keyboard-reachably also makes
+    // its contents keyboard-reachable.
+    if (isOpen) {
+      const firstLink = links.querySelector('a');
+      if (firstLink) firstLink.focus();
+    }
   });
 
-  links.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+  links.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => closeMenu(false)));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && links.classList.contains('open')) {
+      closeMenu(true);
+    }
+  });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
