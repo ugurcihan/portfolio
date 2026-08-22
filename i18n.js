@@ -2,7 +2,6 @@ const translations = {
   en: {
     page_title: "Ugur Cihan Cekic — Founder &amp; Full-Stack Developer",
     hero_name: "Ugur Cihan Cekic",
-    nav_logo: "Ugur Cihan ✎",
     footer_name: "Ugur Cihan Cekic",
     nav_about: "About",
     nav_projects: "Projects",
@@ -14,9 +13,10 @@ const translations = {
     hero_subtitle: "I turn ideas into working products — coffee, code, and a bit of stubbornness. ✨",
     btn_projects: "See My Projects",
     btn_contact: "Say Hello 👋",
+    hero_scroll_hint: "Scroll to explore ↓",
 
     about_title: "About Me",
-    about_text: "I build products end to end — from a rough idea to something real people actually use. Over the past few years I've shipped a management SaaS for trade fairs (KuExpo), an automated code-audit agent for developers (The Bug), health and mobility apps, and an iOS app live on the App Store. I work across the whole stack myself — design, backend, mobile, and the unglamorous parts like QA and compliance. I care about shipping things that work, not demos.",
+    about_text: "I'm the founder &amp; CEO of KuExpo, an AI-powered fair-management platform I've built and grown from the ground up — that's where most of my time, and all of my conviction, goes. Everything else I've shipped sits alongside it as proof of range: an automated code-audit agent for developers (The Bug), a review-reply SaaS for local businesses (ReviewMaster TR), health and mobility apps, and an iOS app live on the App Store. Different problems, the same instinct — design it, build it, ship it, and don't call it done until it actually works.",
     mini1: "Product-minded 🎯",
     mini2: "End-to-end execution 🚀",
     mini3: "Cross-platform: Web, iOS, Android 📱",
@@ -65,13 +65,13 @@ const translations = {
 
     contact_title: "Got an idea? 💭",
     contact_text: "Reach out for new projects, collaborations, or just to say hi.",
+    btn_github: "GitHub",
 
     footer_text: "Built with coffee and code ☕"
   },
   tr: {
     page_title: "Uğur Cihan Çekiç — Kurucu ve Full-Stack Geliştirici",
     hero_name: "Uğur Cihan Çekiç",
-    nav_logo: "Uğur Cihan ✎",
     footer_name: "Uğur Cihan Çekiç",
     nav_about: "Hakkımda",
     nav_projects: "Projeler",
@@ -83,9 +83,10 @@ const translations = {
     hero_subtitle: "Fikirleri çalışan ürünlere dönüştürüyorum — kahve, kod ve biraz inatla. ✨",
     btn_projects: "Projelerimi Gör",
     btn_contact: "Merhaba De 👋",
+    hero_scroll_hint: "Keşfetmek için kaydır ↓",
 
     about_title: "Hakkımda",
-    about_text: "Fikirden gerçek kullanıcıya ulaşan bir ürüne kadar tüm süreci ben yürütüyorum. Son birkaç yılda bir fuar yönetim SaaS'ı (KuExpo), geliştiriciler için otomatik bir kod denetim ajanı (The Bug), sağlık ve mobilite uygulamaları ve App Store'da yayınlanmış bir iOS uygulaması çıkardım. Tasarımdan backend'e, mobil geliştirmeden QA ve uyumluluk gibi göz önünde olmayan işlere kadar her şeyi kendim yürütüyorum. Beni ilgilendiren demo değil, gerçekten çalışan şeyler ortaya koymak.",
+    about_text: "KuExpo'nun kurucusu ve CEO'suyum — sıfırdan kurup büyüttüğüm, AI destekli bir fuar yönetim platformu. Zamanımın çoğu, inancımın tamamı orada. Bunun yanında ürettiğim diğer her şey bir yetkinlik kanıtı gibi duruyor: geliştiriciler için otomatik bir kod denetim ajanı (The Bug), yerel işletmeler için bir yorum yanıt SaaS'ı (ReviewMaster TR), sağlık ve mobilite uygulamaları, App Store'da yayında bir iOS uygulaması. Farklı problemler, aynı refleks: tasarla, kur, yayınla — gerçekten çalıştığından emin olmadan bitmiş sayma.",
     mini1: "Ürün odaklı düşünürüm 🎯",
     mini2: "Uçtan uca geliştirme 🚀",
     mini3: "Çoklu platform: Web, iOS, Android 📱",
@@ -134,6 +135,7 @@ const translations = {
 
     contact_title: "Bir fikrin mi var? 💭",
     contact_text: "Yeni projeler, iş birlikleri veya sadece merhaba demek için ulaşabilirsin.",
+    btn_github: "GitHub",
 
     footer_text: "Kahve ve kodla yapıldı ☕"
   }
