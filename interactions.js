@@ -1,4 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.previewable');
+  const modal = document.getElementById('previewModal');
+  const backdrop = document.getElementById('previewBackdrop');
+  const closeBtn = document.getElementById('previewClose');
+  const img = document.getElementById('previewImage');
+  const titleEl = document.getElementById('previewTitle');
+  if (!cards.length || !modal) return;
+
+  let lastFocused = null;
+
+  function openPreview(card) {
+    lastFocused = card;
+    img.src = card.dataset.preview;
+    img.alt = card.dataset.previewTitle + ' — design preview';
+    titleEl.textContent = card.dataset.previewTitle;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+
+  function closePreview() {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lastFocused) lastFocused.focus();
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => openPreview(card));
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openPreview(card);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closePreview);
+  backdrop.addEventListener('click', closePreview);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closePreview();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const el = document.querySelector('.logo-type');
   if (!el) return;
   const full = el.dataset.full || '';

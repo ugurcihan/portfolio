@@ -22,6 +22,7 @@ const translations = {
     mini3: "Cross-platform: Web, iOS, Android 📱",
 
     projects_title: "My Projects",
+    preview_note: "Design preview — not a live, browsable site.",
 
     p1_tagline: "AI-powered B2B2C fair management platform",
     p1_desc: "A SaaS for managing trade fairs &amp; events — free for organizers, usage-based pricing for exhibiting companies.",
@@ -92,6 +93,7 @@ const translations = {
     mini3: "Çoklu platform: Web, iOS, Android 📱",
 
     projects_title: "Projelerim",
+    preview_note: "Tasarım önizlemesi — canlı, gezilebilir bir site değildir.",
 
     p1_tagline: "AI destekli B2B2C fuar yönetim platformu",
     p1_desc: "Organizatörlere ücretsiz, firmalara kullanım bazlı fiyatlandırmayla çalışan fuar &amp; etkinlik yönetim SaaS'ı.",
