@@ -147,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('previewClose');
   const img = document.getElementById('previewImage');
   const titleEl = document.getElementById('previewTitle');
+  const liveLink = document.getElementById('previewLiveLink');
+  const noteEl = document.getElementById('previewNote');
   if (!cards.length || !modal) return;
 
   let lastFocused = null;
@@ -156,6 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
     img.src = card.dataset.preview;
     img.alt = card.dataset.previewTitle + ' — design preview';
     titleEl.textContent = card.dataset.previewTitle;
+    const isLive = Boolean(card.dataset.live);
+    if (liveLink) {
+      liveLink.href = card.dataset.live || '#';
+      liveLink.hidden = !isLive;
+    }
+    // The static note claims "not a live, browsable site" — true for the
+    // screenshot-only cards, but actively false for one that has a real
+    // data-live URL, so the two must never show at once.
+    if (noteEl) noteEl.hidden = isLive;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';

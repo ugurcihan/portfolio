@@ -23,6 +23,7 @@ const translations = {
 
     projects_title: "My Projects",
     preview_note: "Design preview — not a live, browsable site.",
+    preview_live_link: "View live site ↗",
 
     p1_tagline: "AI-powered B2B2C fair management platform",
     p1_desc: "A SaaS for managing trade fairs &amp; events — free for organizers, usage-based pricing for exhibiting companies.",
@@ -47,6 +48,8 @@ const translations = {
     p10_desc: "Connects a business's Google profile and drafts on-brand AI replies to customer reviews — nothing sends without owner approval.",
     p11_tagline: "iOS photo &amp; video editing app with on-device effects",
     p11_desc: "SwiftUI app with a Node/TypeScript backend for auth and storage — all photo/video processing runs on-device, not server-side.",
+    p12_tagline: "Motion-first redesign concept for a corporate event agency",
+    p12_desc: "Independent redesign concept of a real client's Wix site — WebGL hero, scroll-driven motion, and a working mobile nav. Live and fully browsable, not just a screenshot.",
 
     stack_title: "How I Build",
     stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
@@ -94,6 +97,7 @@ const translations = {
 
     projects_title: "Projelerim",
     preview_note: "Tasarım önizlemesi — canlı, gezilebilir bir site değildir.",
+    preview_live_link: "Canlı Siteyi Görüntüle ↗",
 
     p1_tagline: "AI destekli B2B2C fuar yönetim platformu",
     p1_desc: "Organizatörlere ücretsiz, firmalara kullanım bazlı fiyatlandırmayla çalışan fuar &amp; etkinlik yönetim SaaS'ı.",
@@ -118,6 +122,8 @@ const translations = {
     p10_desc: "İşletmenin Google Business profilini bağlar, marka tonuna uygun AI yanıt taslakları üretir — onay olmadan hiçbir yanıt otomatik gönderilmez.",
     p11_tagline: "Cihaz üzerinde efekt işleyen iOS fotoğraf &amp; video uygulaması",
     p11_desc: "Auth ve depolama için Node/TypeScript backend'i olan SwiftUI uygulaması — tüm fotoğraf/video işleme cihaz üzerinde çalışır, sunucuda değil.",
+    p12_tagline: "Kurumsal etkinlik ajansı için hareket odaklı yeniden tasarım konsepti",
+    p12_desc: "Gerçek bir müşterinin Wix sitesinin bağımsız yeniden tasarım konsepti — WebGL hero, scroll animasyonları ve çalışan mobil menüyle. Sadece ekran görüntüsü değil, canlı ve tamamen gezilebilir.",
 
     stack_title: "Nasıl İnşa Ediyorum",
     stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",

@@ -431,6 +431,16 @@ section:not(.hero) { padding: 30px 0; }
   flex-shrink: 0; text-align: center; font-size: 0.78rem; color: var(--dim);
   padding: 10px; background: var(--bg); border-top: 1px solid rgba(245,236,217,0.1); margin: 0;
 }
+.preview-live-link {
+  flex-shrink: 0; display: block; text-align: center; margin: 0 auto 14px; width: fit-content;
+  background: var(--coral); color: var(--ink-dark); font-weight: 700; font-size: 0.85rem;
+  padding: 9px 18px; border-radius: 999px; border: 2px solid var(--ink);
+  box-shadow: 3px 3px 0 var(--ink); transition: transform .15s ease, box-shadow .15s ease;
+}
+.preview-live-link:hover, .preview-live-link:focus-visible {
+  transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink);
+}
+.preview-live-link[hidden] { display: none; }
 
 @media (max-width: 640px) {
   .preview-modal { padding: 0; }
