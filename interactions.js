@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const wrap = document.getElementById('glowNameWrap');
+  if (wrap) {
+    wrap.addEventListener('pointermove', (e) => {
+      const r = wrap.getBoundingClientRect();
+      wrap.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      wrap.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.previewable');
   const modal = document.getElementById('previewModal');
   const backdrop = document.getElementById('previewBackdrop');
