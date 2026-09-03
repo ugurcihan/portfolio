@@ -50,6 +50,8 @@ const translations = {
     p11_desc: "SwiftUI app with a Node/TypeScript backend for auth and storage — all photo/video processing runs on-device, not server-side.",
     p12_tagline: "Motion-first redesign concept for a corporate event agency",
     p12_desc: "Independent redesign concept of a real client's Wix site — WebGL hero, scroll-driven motion, and a working mobile nav. Live and fully browsable, not just a screenshot.",
+    p13_tagline: "Pastel-pink storefront for a handmade Trendyol shop",
+    p13_desc: "Standalone e-commerce concept for a real handmade brand. A headless-Chrome scraper pulls the shop's ~190 Trendyol products, prices, and images nightly into a JSON catalog; the site renders them with filtering, quick-view, and confetti — checkout hands off to Trendyol. Live and browsable.",
 
     stack_title: "How I Build",
     stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
@@ -124,6 +126,8 @@ const translations = {
     p11_desc: "Auth ve depolama için Node/TypeScript backend'i olan SwiftUI uygulaması — tüm fotoğraf/video işleme cihaz üzerinde çalışır, sunucuda değil.",
     p12_tagline: "Kurumsal etkinlik ajansı için hareket odaklı yeniden tasarım konsepti",
     p12_desc: "Gerçek bir müşterinin Wix sitesinin bağımsız yeniden tasarım konsepti — WebGL hero, scroll animasyonları ve çalışan mobil menüyle. Sadece ekran görüntüsü değil, canlı ve tamamen gezilebilir.",
+    p13_tagline: "El yapımı bir Trendyol mağazası için pastel-pembe vitrin",
+    p13_desc: "Gerçek bir el yapımı marka için bağımsız e-ticaret konsepti. Headless-Chrome scraper mağazanın ~190 Trendyol ürününü, fiyatını ve görselini her gece JSON kataloğa çeker; site bunları filtre, hızlı bakış ve konfetiyle gösterir — ödeme Trendyol'a devredilir. Canlı ve gezilebilir.",
 
     stack_title: "Nasıl İnşa Ediyorum",
     stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",
