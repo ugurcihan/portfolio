@@ -7,6 +7,7 @@ const translations = {
     nav_projects: "Projects",
     nav_stack: "Stack",
     nav_contact: "Contact",
+    nav_press: "Press",
 
     hero_greeting: "hi, I'm 👋",
     hero_role: "Founder &amp; Full-Stack Developer",
@@ -21,6 +22,12 @@ const translations = {
     mini2: "End-to-end execution 🚀",
     mini3: "Cross-platform: Web, iOS, Android 📱",
 
+    press_title: "In the Press",
+    press_source: "UAE Times Now",
+    press_date: "September 9, 2026",
+    press_excerpt: "How a missing developer turned into a founder's decision to learn to build it himself, and how that led to KuExpo, a platform reshaping how exhibitions connect people, companies and experiences.",
+    press_cta: "Read the article",
+    press_newtab: " (opens in a new tab)",
     projects_title: "My Projects",
     preview_note: "Design preview — not a live, browsable site.",
     preview_live_link: "View live site ↗",
@@ -83,6 +90,7 @@ const translations = {
     nav_projects: "Projeler",
     nav_stack: "Teknoloji",
     nav_contact: "İletişim",
+    nav_press: "Basın",
 
     hero_greeting: "merhaba, ben 👋",
     hero_role: "Kurucu ve Full-Stack Geliştirici",
@@ -97,6 +105,12 @@ const translations = {
     mini2: "Uçtan uca geliştirme 🚀",
     mini3: "Çoklu platform: Web, iOS, Android 📱",
 
+    press_title: "Basında",
+    press_source: "UAE Times Now",
+    press_date: "9 Eylül 2026",
+    press_excerpt: "Bir geliştirici bulamamanın, \"o zaman kendim yaparım\" kararına dönüşmesi ve bunun fuarların insanları, şirketleri ve deneyimleri buluşturma biçimini yeniden şekillendiren KuExpo'ya uzanan hikayesi. (Makale İngilizcedir.)",
+    press_cta: "Makaleyi oku",
+    press_newtab: " (yeni sekmede açılır)",
     projects_title: "Projelerim",
     preview_note: "Tasarım önizlemesi — canlı, gezilebilir bir site değildir.",
     preview_live_link: "Canlı Siteyi Görüntüle ↗",
