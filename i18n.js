@@ -61,6 +61,8 @@ const translations = {
     p13_desc: "Standalone e-commerce concept for a real handmade brand. A headless-Chrome scraper pulls the shop's ~190 Trendyol products, prices, and images nightly into a JSON catalog; the site renders them with filtering, quick-view, and confetti — checkout hands off to Trendyol. Live and browsable.",
     p14_tagline: "OCPP 1.6-J EV charging protocol simulator",
     p14_desc: "A protocol-correct OCPP-J CSMS and charge-point simulator over real WebSocket message framing — BootNotification through StopTransaction with periodic MeterValues — plus a live session dashboard. Dockerized, open source.",
+    p15_tagline: "OCPI 2.2.1 EV charging roaming protocol between networks",
+    p15_desc: "A CPO platform and eMSP roaming client implementing the real OCPI registration handshake (Token A/B/C exchange), Locations, Sessions and CDR settlement — the sibling protocol to OCPP, sitting between a charging network and third-party apps. Dockerized, open source.",
 
     stack_title: "How I Build",
     stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
@@ -147,6 +149,8 @@ const translations = {
     p13_desc: "Gerçek bir el yapımı marka için bağımsız e-ticaret konsepti. Headless-Chrome scraper mağazanın ~190 Trendyol ürününü, fiyatını ve görselini her gece JSON kataloğa çeker; site bunları filtre, hızlı bakış ve konfetiyle gösterir — ödeme Trendyol'a devredilir. Canlı ve gezilebilir.",
     p14_tagline: "OCPP 1.6-J elektrikli araç şarj protokolü simülatörü",
     p14_desc: "Gerçek WebSocket mesaj formatıyla protokol-doğru bir OCPP-J CSMS ve şarj istasyonu simülatörü — BootNotification'dan StopTransaction'a, periyodik MeterValues ile — ve canlı bir oturum panosu. Dockerize edilmiş, açık kaynak.",
+    p15_tagline: "Şarj ağları arası OCPI 2.2.1 roaming protokolü",
+    p15_desc: "Gerçek OCPI kayıt (handshake) akışını (Token A/B/C değişimi), Lokasyonlar, Oturumlar ve CDR faturalama modüllerini uygulayan bir CPO platformu ve eMSP roaming istemcisi — OCPP'nin kardeşi, şarj ağı ile üçüncü parti uygulamalar arasında duran protokol. Dockerize edilmiş, açık kaynak.",
 
     stack_title: "Nasıl İnşa Ediyorum",
     stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",
