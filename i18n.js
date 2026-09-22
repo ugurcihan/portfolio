@@ -59,6 +59,8 @@ const translations = {
     p12_desc: "Independent redesign concept of a real client's Wix site — WebGL hero, scroll-driven motion, and a working mobile nav. Live and fully browsable, not just a screenshot.",
     p13_tagline: "Pastel-pink storefront for a handmade Trendyol shop",
     p13_desc: "Standalone e-commerce concept for a real handmade brand. A headless-Chrome scraper pulls the shop's ~190 Trendyol products, prices, and images nightly into a JSON catalog; the site renders them with filtering, quick-view, and confetti — checkout hands off to Trendyol. Live and browsable.",
+    p14_tagline: "OCPP 1.6-J EV charging protocol simulator",
+    p14_desc: "A protocol-correct OCPP-J CSMS and charge-point simulator over real WebSocket message framing — BootNotification through StopTransaction with periodic MeterValues — plus a live session dashboard. Dockerized, open source.",
 
     stack_title: "How I Build",
     stack_intro: "I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀",
@@ -143,6 +145,8 @@ const translations = {
     p12_desc: "Gerçek bir müşterinin Wix sitesinin bağımsız yeniden tasarım konsepti — WebGL hero, scroll animasyonları ve çalışan mobil menüyle. Sadece ekran görüntüsü değil, canlı ve tamamen gezilebilir.",
     p13_tagline: "El yapımı bir Trendyol mağazası için pastel-pembe vitrin",
     p13_desc: "Gerçek bir el yapımı marka için bağımsız e-ticaret konsepti. Headless-Chrome scraper mağazanın ~190 Trendyol ürününü, fiyatını ve görselini her gece JSON kataloğa çeker; site bunları filtre, hızlı bakış ve konfetiyle gösterir — ödeme Trendyol'a devredilir. Canlı ve gezilebilir.",
+    p14_tagline: "OCPP 1.6-J elektrikli araç şarj protokolü simülatörü",
+    p14_desc: "Gerçek WebSocket mesaj formatıyla protokol-doğru bir OCPP-J CSMS ve şarj istasyonu simülatörü — BootNotification'dan StopTransaction'a, periyodik MeterValues ile — ve canlı bir oturum panosu. Dockerize edilmiş, açık kaynak.",
 
     stack_title: "Nasıl İnşa Ediyorum",
     stack_intro: "Diller ve platformlar arasında rahatça geçiş yapıyorum — web'den mobile, backend'den otomasyona kadar ihtiyaç neyse onu yazıyorum. iOS ve Android'de yayınlanmış uygulamalarım var. 🚀",
