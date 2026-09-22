@@ -59,7 +59,7 @@ const translations = {
     p12_desc: "Independent redesign concept of a real client's Wix site — WebGL hero, scroll-driven motion, and a working mobile nav. Live and fully browsable, not just a screenshot.",
     p13_tagline: "Pastel-pink storefront for a handmade Trendyol shop",
     p13_desc: "Standalone e-commerce concept for a real handmade brand. A headless-Chrome scraper pulls the shop's ~190 Trendyol products, prices, and images nightly into a JSON catalog; the site renders them with filtering, quick-view, and confetti — checkout hands off to Trendyol. Live and browsable.",
-    p14_tagline: "Lodestar — EV charging network backend: OCPP station comms + OCPI roaming",
+    p14_tagline: "Gridspark — EV charging network backend: OCPP station comms + OCPI roaming",
     p14_desc: "A from-scratch EV charging platform covering both protocols a real network runs on, in one process: real OCPP-J session framing (BootNotification through StopTransaction, periodic MeterValues) for talking to charge points, and the real OCPI registration handshake (Token A/B/C) plus Locations/CDR settlement for roaming partners — with a live, tabbed operations console. Dockerized, open source.",
 
     stack_title: "How I Build",
@@ -145,7 +145,7 @@ const translations = {
     p12_desc: "Gerçek bir müşterinin Wix sitesinin bağımsız yeniden tasarım konsepti — WebGL hero, scroll animasyonları ve çalışan mobil menüyle. Sadece ekran görüntüsü değil, canlı ve tamamen gezilebilir.",
     p13_tagline: "El yapımı bir Trendyol mağazası için pastel-pembe vitrin",
     p13_desc: "Gerçek bir el yapımı marka için bağımsız e-ticaret konsepti. Headless-Chrome scraper mağazanın ~190 Trendyol ürününü, fiyatını ve görselini her gece JSON kataloğa çeker; site bunları filtre, hızlı bakış ve konfetiyle gösterir — ödeme Trendyol'a devredilir. Canlı ve gezilebilir.",
-    p14_tagline: "Lodestar — Elektrikli araç şarj ağı backend'i: OCPP istasyon iletişimi + OCPI roaming",
+    p14_tagline: "Gridspark — Elektrikli araç şarj ağı backend'i: OCPP istasyon iletişimi + OCPI roaming",
     p14_desc: "Gerçek bir şarj ağının çalıştığı iki protokolü de tek process'te kapsayan, sıfırdan yazılmış bir platform: şarj istasyonlarıyla konuşmak için gerçek OCPP-J oturum çerçeveleme (BootNotification'dan StopTransaction'a, periyodik MeterValues) ve roaming ortakları için gerçek OCPI kayıt akışı (Token A/B/C) ile Lokasyon/CDR faturalama — canlı, sekmeli bir operasyon panosuyla. Dockerize edilmiş, açık kaynak.",
 
     stack_title: "Nasıl İnşa Ediyorum",
