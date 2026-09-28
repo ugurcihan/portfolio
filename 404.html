@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page not found — Ugur Cihan Cekic</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#17130f">
+<link rel="icon" href="/assets/profile.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="notfound">
+  <p class="handwritten-tag">404</p>
+  <h1 id="nfTitle">This page wandered off 🔌</h1>
+  <p id="nfText">The link may be old or mistyped. Everything else is still here.</p>
+  <a href="/" class="btn btn-coral big" id="nfBtn">Back to the homepage</a>
+</main>
+<script>
+  if ((navigator.language || '').toLowerCase().startsWith('tr')) {
+    document.documentElement.lang = 'tr';
+    document.title = 'Sayfa bulunamadı — Uğur Cihan Çekiç';
+    document.getElementById('nfTitle').textContent = 'Bu sayfa kaybolmuş 🔌';
+    document.getElementById('nfText').textContent = 'Link eski ya da yanlış yazılmış olabilir. Geri kalan her şey yerinde.';
+    document.getElementById('nfBtn').textContent = 'Ana sayfaya dön';
+  }
+</script>
+</body>
+</html>

@@ -16,8 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeBtn = document.getElementById('previewClose');
   const img = document.getElementById('previewImage');
   const titleEl = document.getElementById('previewTitle');
-  const liveLink = document.getElementById('previewLiveLink');
+  const linksEl = document.getElementById('previewLinks');
+  const liveLabelEl = document.getElementById('previewLiveLabel');
   const noteEl = document.getElementById('previewNote');
+  const LINK_LABELS = { appstore: 'App Store ↗', play: 'Google Play ↗', github: 'GitHub ↗' };
+
+  // data-links="appstore|https://…;;play|https://…" — a card can point to
+  // several real destinations; data-live is kept as the single-link shorthand.
+  function cardLinks(card) {
+    if (card.dataset.links) {
+      return card.dataset.links.split(';;').map((pair) => {
+        const [kind, url] = pair.split('|');
+        return { url, label: LINK_LABELS[kind] || url };
+      });
+    }
+    if (card.dataset.live) {
+      return [{ url: card.dataset.live, label: liveLabelEl ? liveLabelEl.textContent : 'View live site ↗' }];
+    }
+    return [];
+  }
   if (!cards.length || !modal) return;
 
   let lastFocused = null;
@@ -27,15 +44,22 @@ document.addEventListener('DOMContentLoaded', () => {
     img.src = card.dataset.preview;
     img.alt = card.dataset.previewTitle + ' — design preview';
     titleEl.textContent = card.dataset.previewTitle;
-    const isLive = Boolean(card.dataset.live);
-    if (liveLink) {
-      liveLink.href = card.dataset.live || '#';
-      liveLink.hidden = !isLive;
+    const links = cardLinks(card);
+    if (linksEl) {
+      linksEl.replaceChildren(...links.map(({ url, label }) => {
+        const a = document.createElement('a');
+        a.className = 'preview-live-link';
+        a.href = url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = label;
+        return a;
+      }));
+      linksEl.hidden = links.length === 0;
     }
     // The static note claims "not a live, browsable site" — true for the
-    // screenshot-only cards, but actively false for one that has a real
-    // data-live URL, so the two must never show at once.
-    if (noteEl) noteEl.hidden = isLive;
+    // screenshot-only cards, but false for any card with real links.
+    if (noteEl) noteEl.hidden = links.length > 0;
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -170,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function loadAmbientBg() {
     if (ambientBgRequested || !ambientBg) return;
     ambientBgRequested = true;
-    const base = 'assets/server-bg';
+    const base = 'assets/server-bg-v2';
     const applyBg = (ext) => {
       ambientBg.style.backgroundImage =
         `linear-gradient(rgba(23,19,15,0.88), rgba(23,19,15,0.88)), url('${base}.${ext}')`;
@@ -231,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Prefer a WebP version of the sprite sheet (much smaller at this
   // resolution) if one has been published alongside the JPEG; fall back
   // to the original JPEG automatically if it 404s or the browser can't
-  // decode it. Drop hero-sprite.webp next to hero-sprite.jpg to activate —
+  // decode it. Drop hero-sprite-v2.webp next to hero-sprite-v2.jpg to activate —
   // no further code changes needed.
   const jpgSrc = canvas.dataset.sprite;
   const webpSrc = jpgSrc.replace(/\.jpe?g$/i, '.webp');
