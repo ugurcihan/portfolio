@@ -270,6 +270,16 @@ section:not(.hero) { padding: 30px 0; }
 .book-points { list-style: none; padding: 0; margin: 0 0 22px; display: grid; gap: 6px; }
 .book-points li { position: relative; padding-left: 22px; }
 .book-points li::before { content: ''; position: absolute; left: 0; top: .55em; width: 9px; height: 9px; border-radius: 50%; background: var(--yellow); }
+.book-form { position: relative; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.book-input { flex: 1 1 220px; min-width: 0; font: inherit; color: var(--ink); background: var(--bg); border: 2px solid var(--ink); border-radius: 12px; padding: 12px 16px; }
+.book-input::placeholder { color: var(--dim); }
+.book-input:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+.book-input[aria-invalid="true"] { border-color: var(--coral); }
+.book-form .btn { border: 0; font-family: inherit; cursor: pointer; }
+.book-form .btn[disabled] { opacity: .6; cursor: wait; animation: none; }
+.book-msg { flex-basis: 100%; margin: 0; min-height: 1.4em; font-weight: 700; color: var(--teal); }
+.book-msg.is-error { color: var(--coral); }
+.book-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .book-points li:nth-child(even)::before { background: none; border: 2px solid var(--coral); }
 @media (max-width: 760px) {
   .book-card { grid-template-columns: 1fr; gap: 22px; padding: 18px; }

@@ -309,3 +309,55 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => { resizeCanvas(); onScroll(); });
   requestAnimationFrame(tick);
 });
+
+// Book waitlist: posts the email to Formspree (data-endpoint on the form).
+// Until an endpoint is configured, falls back to a prefilled mailto.
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('bookForm');
+  if (!form) return;
+  const input = document.getElementById('bookEmail');
+  const msg = document.getElementById('bookMsg');
+  const btn = form.querySelector('button[type="submit"]');
+  const t = (key) => {
+    const lang = document.documentElement.lang === 'tr' ? 'tr' : 'en';
+    return (typeof translations !== 'undefined' && translations[lang][key]) || '';
+  };
+  const show = (key, isError) => {
+    msg.textContent = t(key);
+    msg.classList.toggle('is-error', !!isError);
+  };
+
+  input.addEventListener('input', () => input.removeAttribute('aria-invalid'));
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!input.checkValidity()) {
+      input.setAttribute('aria-invalid', 'true');
+      show('book_invalid', true);
+      input.focus();
+      return;
+    }
+    const endpoint = form.dataset.endpoint;
+    if (!endpoint) {
+      const body = encodeURIComponent('Merhaba, kitap çıktığında bana haber verir misin? E-postam: ' + input.value);
+      window.location.href = 'mailto:ugurcihancekic@gmail.com?subject=Makineyle%20Ayn%C4%B1%20Masada%20-%20Haber%20ver&body=' + body;
+      return;
+    }
+    btn.disabled = true;
+    msg.textContent = '';
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      form.reset();
+      show('book_ok', false);
+    } catch (err) {
+      show('book_err', true);
+    } finally {
+      btn.disabled = false;
+    }
+  });
+});

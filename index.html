@@ -166,7 +166,15 @@
           <li data-i18n="book_p2">11 diagrams, tables, and a small experiment in every chapter</li>
           <li data-i18n="book_p3">A one-page "doubt checklist" to hand to your parents</li>
         </ul>
-        <a class="btn btn-coral" href="mailto:ugurcihancekic@gmail.com?subject=Makineyle%20Ayn%C4%B1%20Masada%20-%20Haber%20ver&amp;body=Merhaba%2C%20kitap%20%C3%A7%C4%B1kt%C4%B1%C4%9F%C4%B1nda%20bana%20haber%20verir%20misin%3F" data-i18n="book_cta">Notify me when it's out ✉️</a>
+        <!-- Waitlist: set data-endpoint to the Formspree form URL (https://formspree.io/f/<id>). Empty = mailto fallback. -->
+        <form class="book-form" id="bookForm" data-endpoint="" novalidate>
+          <label class="sr-only" for="bookEmail" data-i18n="book_email_label">Your email address</label>
+          <input class="book-input" id="bookEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <input type="hidden" name="_subject" value="Makineyle Aynı Masada — waitlist">
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="book-hp">
+          <button class="btn btn-coral" type="submit" data-i18n="book_cta">Notify me when it's out ✉️</button>
+          <p class="book-msg" id="bookMsg" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </div>
   </section>
