@@ -11,8 +11,10 @@ Personal portfolio website. Bilingual (English default / Turkish toggle), built 
 - EN/TR language switch with instant client-side translation (`i18n.js`)
 - Scroll-triggered animations, mobile nav, and idle motion (`interactions.js`)
 - Project showcase: SaaS products, mobile apps, and web platforms
-- A downloadable resume (`Ugur_Cihan_Cekic_Resume.pdf`), linked from the Contact section, formatted for freelance platforms like Upwork/Fiverr
-- Four alternate design directions kept for reference: `variant-a.html` (terminal/dark), `variant-b.html` (editorial/minimal), `variant-c.html` (gradient/glass), `variant-d.html` (illustrated — an earlier draft of the hero, since replaced by the video version in `index.html`)
+- Press, Book (coming soon), and Contact sections; a downloadable presentation deck (`assets/Ugur-Cihan-Cekic-Sunum.pdf`, Turkish) is linked from Contact
+- English copy is rendered into `index.html` so crawlers and link previews see real text without running JS; `i18n.js` swaps in Turkish on toggle
+- Social share image: `assets/og-image.jpg` (1200×630)
+- Cookieless page-view analytics via Vercel Web Analytics (enable it in the Vercel dashboard under Project → Analytics)
 
 ## Running locally
 
