@@ -226,14 +226,14 @@ section:not(.hero) { padding: 30px 0; }
   border-color: var(--coral);
   background: rgba(255,255,255,0.06);
 }
-.press-img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 12px; display: block; }
+.press-img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 64% center; border-radius: 12px; display: block; }
 .press-source { color: var(--coral); font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 8px; }
 .press-headline { font-family: var(--hand); font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15; margin: 0 0 12px; }
 .press-excerpt { color: var(--dim); margin: 0 0 16px; }
 .press-cta { color: var(--yellow); font-weight: 600; }
 @media (max-width: 640px) {
   .press-card { grid-template-columns: 1fr; gap: 16px; }
-  .press-img { aspect-ratio: 4 / 3; object-position: center 15%; }
+  .press-img { aspect-ratio: 4 / 3; object-position: 68% center; }
 }
 
 
