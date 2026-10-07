@@ -105,6 +105,7 @@ const translations = {
     btn_github: "GitHub",
     btn_deck: "Download presentation (PDF, TR)",
 
+    cert_label: "Certificate",
     footer_text: "Built with coffee and code ☕"
   },
   tr: {
@@ -213,6 +214,7 @@ const translations = {
     btn_github: "GitHub",
     btn_deck: "Sunumu indir (PDF)",
 
+    cert_label: "Sertifika",
     footer_text: "Kahve ve kodla yapıldı ☕"
   }
 };

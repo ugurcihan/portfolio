@@ -505,3 +505,5 @@ section:not(.hero) { padding: 30px 0; }
 }
 .preview-links .preview-live-link { margin: 0 0 14px; }
 .preview-links .preview-live-link { text-decoration: none; }
+
+.cert-line { text-align: center; color: var(--dim); font-size: 0.9rem; font-weight: 600; margin: 28px 0 0; }
