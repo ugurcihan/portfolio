@@ -375,3 +375,51 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
 });
+
+/* Visitor + hello counters (abacus.jasoncameron.dev). Counts each browser once:
+   visits once per 24h, hello once ever. Fails silently (the counters just stay hidden).
+   Add ?nocount to the URL once to exclude your own browser. */
+document.addEventListener('DOMContentLoaded', () => {
+  const API = 'https://abacus.jasoncameron.dev';
+  const NS = 'ugurcihancekic-com';
+  const VISITS_BASE = 0; // add a real historical total here if you have one
+  const store = {
+    get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+  const live = /^https?:$/.test(location.protocol) && !/^(localhost|127\.|\[::1\])/.test(location.hostname);
+  if (/[?&]nocount\b/.test(location.search)) store.set('nocount', '1');
+  const counting = live && !store.get('nocount') && !navigator.webdriver;
+
+  const call = async (action, key) => {
+    const r = await fetch(`${API}/${action}/${NS}/${key}`);
+    if (!r.ok) throw new Error(r.status);
+    return (await r.json()).value;
+  };
+  const fmt = (n) => Number(n).toLocaleString(document.documentElement.lang === 'tr' ? 'tr-TR' : 'en-US');
+
+  const visitorsEl = document.getElementById('visitors');
+  const visitorCount = document.getElementById('visitorCount');
+  const helloCount = document.getElementById('helloCount');
+  const helloBtn = document.getElementById('helloBtn');
+  const DAY = 24 * 60 * 60 * 1000;
+
+  const lastVisit = Number(store.get('visit-at') || 0);
+  const countVisit = counting && Date.now() - lastVisit > DAY;
+  call(countVisit ? 'hit' : 'get', 'visits').then((v) => {
+    if (countVisit) store.set('visit-at', String(Date.now()));
+    visitorCount.textContent = fmt(v + VISITS_BASE);
+    visitorsEl.hidden = false;
+  }).catch(() => {});
+
+  call('get', 'hellos').then((v) => {
+    helloCount.textContent = fmt(v);
+    helloCount.hidden = false;
+  }).catch(() => {});
+
+  if (helloBtn) helloBtn.addEventListener('click', () => {
+    if (!counting || store.get('hello-sent')) return;
+    store.set('hello-sent', '1');
+    call('hit', 'hellos').then((v) => { helloCount.textContent = fmt(v); helloCount.hidden = false; }).catch(() => store.set('hello-sent', ''));
+  });
+});

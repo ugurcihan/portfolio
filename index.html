@@ -117,7 +117,7 @@
             <p class="subtitle" data-i18n="hero_subtitle">I turn ideas into working products — coffee, code, and a bit of stubbornness. ✨</p>
             <div class="hero-actions">
               <a href="#projects" class="btn btn-coral" data-i18n="btn_projects">See My Projects</a>
-              <a href="#contact" class="btn btn-outline" data-i18n="btn_contact">Say Hello 👋</a>
+              <a href="#contact" class="btn btn-outline" id="helloBtn"><span data-i18n="btn_contact">Say Hello 👋</span><span class="hello-count" id="helloCount" hidden></span></a>
             </div>
           </div>
         </div>
@@ -447,6 +447,7 @@
   </section>
 
   <footer class="footer">
+    <p class="visitors" id="visitors" hidden><span data-i18n="visitors_label">Page visitors</span>: <strong id="visitorCount"></strong></p>
     <nav class="footer-links" aria-label="Profiles">
       <a href="https://www.linkedin.com/in/ugurcihanc/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://github.com/ugurcihan" target="_blank" rel="noopener">GitHub</a>
