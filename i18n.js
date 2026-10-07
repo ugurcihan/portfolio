@@ -17,7 +17,7 @@ const translations = {
     hero_scroll_hint: "Scroll to explore ↓",
 
     about_title: "About Me",
-    about_text: "I build products end to end — idea, design, engineering, launch. I taught myself software after I couldn't find a developer for my first idea, and I've been shipping my own products to real users ever since: KuExpo, an AI-powered event-management platform, is live on the App Store and Google Play, and LifeCheck Mobility, a personal-safety app, is live on the App Store. These days I'm also writing a book: Makineyle Aynı Masada, a calm, plain-language guide to living with AI (in Turkish, coming soon).",
+    about_text: "I build products end to end — idea, design, engineering, launch. My journey with software began in 2017 with a Swift course, and I went all in after I couldn't find a developer for my first idea. I've been shipping my own products to real users ever since: KuExpo, an AI-powered event-management platform, is live on the App Store and Google Play, and LifeCheck Mobility, a personal-safety app, is live on the App Store. These days I'm also writing a book: Makineyle Aynı Masada, a calm, plain-language guide to living with AI (in Turkish, coming soon).",
     mini1: "Product-minded 🎯",
     mini2: "End-to-end execution 🚀",
     mini3: "Cross-platform: Web, iOS, Android 📱",
@@ -126,7 +126,7 @@ const translations = {
     hero_scroll_hint: "Keşfetmek için kaydır ↓",
 
     about_title: "Hakkımda",
-    about_text: "Ürünleri uçtan uca inşa ediyorum — fikir, tasarım, mühendislik, yayın. İlk fikrim için geliştirici bulamayınca yazılımı kendi kendime öğrendim; o günden beri kendi ürünlerimi gerçek kullanıcılara ulaştırıyorum: AI destekli etkinlik yönetim platformu KuExpo App Store ve Google Play'de, kişisel güvenlik uygulaması LifeCheck Mobility App Store'da yayında. Şu sıralar yapay zekâyı herkesin anlayabileceği sade bir dille anlatan bir kitap yazıyorum: Makineyle Aynı Masada. Yakında.",
+    about_text: "Ürünleri uçtan uca inşa ediyorum — fikir, tasarım, mühendislik, yayın. Yazılımla yolculuğum 2017'de bir Swift kursuyla başladı; ilk fikrim için geliştirici bulamayınca tamamen buna yöneldim. O günden beri kendi ürünlerimi gerçek kullanıcılara ulaştırıyorum: AI destekli etkinlik yönetim platformu KuExpo App Store ve Google Play'de, kişisel güvenlik uygulaması LifeCheck Mobility App Store'da yayında. Şu sıralar yapay zekâyı herkesin anlayabileceği sade bir dille anlatan bir kitap yazıyorum: Makineyle Aynı Masada. Yakında.",
     mini1: "Ürün odaklı düşünürüm 🎯",
     mini2: "Uçtan uca geliştirme 🚀",
     mini3: "Çoklu platform: Web, iOS, Android 📱",
