@@ -112,8 +112,6 @@ const translations = {
     cert_eh_title: "Ethical Hacker Course",
     cert_bc_title: "Programmer Bootcamp: Python, Java, C#",
     cert_ios_title: "iOS 26 & Swift 6: Beginner to Advanced",
-    cert_verify: "Verify on Udemy",
-    certs_intro: "Courses I have completed. Each Udemy certificate links to its public verification page on Udemy.",
     cert_py_date: "Oct 2026",
     cert_swift_date: "Oct 2017",
     footer_text: "Built with coffee and code ☕"
@@ -231,8 +229,6 @@ const translations = {
     cert_eh_title: "Etik Hacker Olma Kursu",
     cert_bc_title: "Programcı Olma Kampı: Python, Java, C#",
     cert_ios_title: "iOS 26 & Swift 6: Başlangıçtan İleri Seviyeye",
-    cert_verify: "Udemy'de doğrula",
-    certs_intro: "Tamamladığım kurslar. Her Udemy sertifikası, Udemy'deki herkese açık doğrulama sayfasına bağlanıyor.",
     cert_py_date: "Eki 2026",
     cert_swift_date: "Eki 2017",
     footer_text: "Kahve ve kodla yapıldı ☕"
