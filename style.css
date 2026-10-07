@@ -525,9 +525,6 @@ section:not(.hero) { padding: 30px 0; }
 .cert-id { color: var(--dim); font-size: 0.75rem; opacity: .75; margin: 2px 0 12px; }
 .cert-btn { font: inherit; font-size: 0.82rem; font-weight: 700; color: var(--yellow); background: none; border: 1px dashed rgba(255,207,86,0.5); border-radius: 999px; padding: 5px 14px; cursor: pointer; transition: background .25s ease, color .25s ease; }
 .cert-btn:hover, .cert-btn:focus-visible { background: var(--yellow); color: var(--ink-dark); }
-.cert-more { grid-column: 1 / -1; justify-content: center; gap: 12px; border-style: dashed; color: var(--dim); text-align: center; padding: 14px; }
-.cert-more span { font-size: 1.6rem; animation: medal-float 3s ease-in-out infinite; }
-.cert-more p { margin: 0; font-weight: 600; }
 .cert-dialog { margin: auto; border: none; border-radius: 14px; padding: 0; background: #f7f7f7; max-width: min(92vw, 900px); overflow: visible; }
 .cert-dialog::backdrop { background: rgba(10,8,5,0.82); }
 .cert-dialog img { display: block; width: 100%; height: auto; border-radius: 14px; }
