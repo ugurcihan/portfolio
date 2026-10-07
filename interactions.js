@@ -361,3 +361,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const dlg = document.getElementById('certDialog');
+  if (!dlg) return;
+  const img = document.getElementById('certImg');
+  document.querySelectorAll('.cert-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      img.src = btn.dataset.cert;
+      img.alt = btn.dataset.alt || '';
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+});

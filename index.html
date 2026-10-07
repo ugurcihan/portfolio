@@ -84,6 +84,7 @@
       <a href="#book" data-i18n="nav_book">Book</a>
       <a href="#projects" data-i18n="nav_projects">Projects</a>
       <a href="#stack" data-i18n="nav_stack">Stack</a>
+      <a href="#certs" data-i18n="nav_certs">Certificates</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </div>
     <div class="nav-right">
@@ -361,7 +362,36 @@
         </div>
       </div>
     </div>
-    <p class="cert-line reveal"><span data-i18n="cert_label">Certificate</span>: Swift Fundamentals — SoloLearn</p>
+  </section>
+
+  <section id="certs" class="certs" aria-labelledby="certsTitle">
+    <h2 class="section-title" id="certsTitle" data-i18n="certs_title">Certificates</h2>
+    <div class="cert-grid">
+      <!-- To add a certificate: put the image in assets/certs/ (name-v1.webp), copy a card below, and update medal text, title, date, ID, data-cert and data-alt. -->
+      <article class="cert-card reveal">
+        <div class="medal" aria-hidden="true"><span>Python</span></div>
+        <div class="cert-info">
+          <h3>Python Developer</h3>
+          <p class="cert-issuer">SoloLearn · <span data-i18n="cert_py_date">Oct 2026</span></p>
+          <p class="cert-id">ID CC-OQRM8ZQA</p>
+          <button type="button" class="cert-btn" data-cert="assets/certs/python-developer-v1.webp" data-alt="Python Developer course certificate, SoloLearn, October 2026" data-i18n="cert_view">View certificate</button>
+        </div>
+      </article>
+      <article class="cert-card reveal">
+        <div class="medal" aria-hidden="true"><span>Swift</span></div>
+        <div class="cert-info">
+          <h3>Swift Fundamentals</h3>
+          <p class="cert-issuer">SoloLearn · <span data-i18n="cert_swift_date">Oct 2017</span></p>
+          <p class="cert-id">ID 1075-3454769</p>
+          <button type="button" class="cert-btn" data-cert="assets/certs/swift-fundamentals-v1.webp" data-alt="Swift Fundamentals course certificate, SoloLearn, October 2017" data-i18n="cert_view">View certificate</button>
+        </div>
+      </article>
+      <div class="cert-card cert-more reveal"><span aria-hidden="true">✨</span><p data-i18n="cert_more">More on the way</p></div>
+    </div>
+    <dialog class="cert-dialog" id="certDialog" aria-label="Certificate">
+      <form method="dialog"><button class="cert-close" aria-label="Close">✕</button></form>
+      <img id="certImg" alt="">
+    </dialog>
   </section>
 
   <section id="contact" class="contact">

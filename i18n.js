@@ -105,7 +105,12 @@ const translations = {
     btn_github: "GitHub",
     btn_deck: "Download presentation (PDF, TR)",
 
-    cert_label: "Certificate",
+    nav_certs: "Certificates",
+    certs_title: "Certificates",
+    cert_view: "View certificate",
+    cert_more: "More on the way",
+    cert_py_date: "Oct 2026",
+    cert_swift_date: "Oct 2017",
     footer_text: "Built with coffee and code ☕"
   },
   tr: {
@@ -214,7 +219,12 @@ const translations = {
     btn_github: "GitHub",
     btn_deck: "Sunumu indir (PDF)",
 
-    cert_label: "Sertifika",
+    nav_certs: "Sertifikalar",
+    certs_title: "Sertifikalar",
+    cert_view: "Sertifikayı gör",
+    cert_more: "Yenileri yolda",
+    cert_py_date: "Eki 2026",
+    cert_swift_date: "Eki 2017",
     footer_text: "Kahve ve kodla yapıldı ☕"
   }
 };
