@@ -82,6 +82,9 @@ const translations = {
     p13_tagline: "Pastel-pink storefront for a handmade Trendyol shop",
     p13_desc: "Standalone e-commerce concept for a real handmade brand. A headless-Chrome scraper pulls the shop's ~190 Trendyol products, prices, and images nightly into a JSON catalog; the site renders them with filtering, quick-view, and confetti — checkout hands off to Trendyol. Live and browsable.",
     p14_tagline: "Gridspark — EV charging network backend: OCPP station comms + OCPI roaming",
+    soon_stamp: "COMING SOON",
+    p15_tagline: "Home &amp; family disaster-safety app — wildfire first",
+    p15_desc: "Built around reassurance, not information: a night-time alarm that can wake a family even when the phone is on silent, a family safety circle with “I'm safe” check-ins, and multi-property evacuation plans. Hazard data comes from satellite feeds with a stated delay — every alert shows its source and timestamp, and it never replaces 112 or official warnings. In planning.",
     p14_desc: "A from-scratch EV charging platform covering both protocols a real network runs on, in one process: real OCPP-J session framing (BootNotification through StopTransaction, periodic MeterValues) for talking to charge points, and the real OCPI registration handshake (Token A/B/C) plus Locations/CDR settlement for roaming partners — with a live, tabbed operations console. Dockerized, open source.",
 
     stack_title: "How I Build",
@@ -199,6 +202,9 @@ const translations = {
     p13_tagline: "El yapımı bir Trendyol mağazası için pastel-pembe vitrin",
     p13_desc: "Gerçek bir el yapımı marka için bağımsız e-ticaret konsepti. Headless-Chrome scraper mağazanın ~190 Trendyol ürününü, fiyatını ve görselini her gece JSON kataloğa çeker; site bunları filtre, hızlı bakış ve konfetiyle gösterir — ödeme Trendyol'a devredilir. Canlı ve gezilebilir.",
     p14_tagline: "Gridspark — Elektrikli araç şarj ağı backend'i: OCPP istasyon iletişimi + OCPI roaming",
+    soon_stamp: "YAKINDA",
+    p15_tagline: "Ev &amp; aile için afet güvenliği uygulaması — önce orman yangını",
+    p15_desc: "Bilgi değil güvence üzerine kurulu: telefon sessizdeyken bile aileyi uyandırabilen gece alarmı, “Güvendeyim” check-in'li aile güvenlik çemberi ve çoklu mülk tahliye planları. Tehlike verisi, gecikmesi açıkça belirtilen uydu kaynaklarından gelir — her uyarıda kaynak ve zaman damgası görünür; 112'nin ve resmi uyarıların yerine geçmez. Planlama aşamasında.",
     p14_desc: "Gerçek bir şarj ağının çalıştığı iki protokolü de tek process'te kapsayan, sıfırdan yazılmış bir platform: şarj istasyonlarıyla konuşmak için gerçek OCPP-J oturum çerçeveleme (BootNotification'dan StopTransaction'a, periyodik MeterValues) ve roaming ortakları için gerçek OCPI kayıt akışı (Token A/B/C) ile Lokasyon/CDR faturalama — canlı, sekmeli bir operasyon panosuyla. Dockerize edilmiş, açık kaynak.",
 
     stack_title: "Nasıl İnşa Ediyorum",

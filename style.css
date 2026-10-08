@@ -346,6 +346,7 @@ section:not(.hero) { padding: 30px 0; }
   padding: 3px 8px; transform: rotate(8deg);
   background: rgba(255,122,92,0.08);
 }
+.sticky.soon .stamp { color: var(--ink-dark); border-color: var(--ink-dark); background: rgba(255,255,255,0.35); }
 .sticky .icon { font-size: 1.7rem; display: block; margin-bottom: 8px; }
 .sticky h3, .sticky h4 { font-family: var(--hand); font-size: 1.6rem; margin-bottom: 4px; }
 .grp-label {
