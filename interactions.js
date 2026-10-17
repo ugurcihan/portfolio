@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const linksEl = document.getElementById('previewLinks');
   const liveLabelEl = document.getElementById('previewLiveLabel');
   const noteEl = document.getElementById('previewNote');
-  const LINK_LABELS = { appstore: 'App Store ↗', play: 'Google Play ↗', github: 'GitHub ↗' };
+  const LINK_LABELS = { web: 'Website ↗', appstore: 'App Store ↗', play: 'Google Play ↗', github: 'GitHub ↗' };
 
   // data-links="appstore|https://…;;play|https://…" — a card can point to
   // several real destinations; data-live is kept as the single-link shorthand.
