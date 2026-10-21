@@ -102,6 +102,7 @@ const translations = {
     b_testing: "🧪 Automated Testing (Playwright)",
     b_uxdesign: "🎯 Product &amp; UX Design",
     b_auth: "🔒 Auth &amp; Security",
+    b_network: "🌐 Computer Networking",
     b_sysdesign: "📐 System Design",
     b_llm: "🧠 LLM Integrations",
 
@@ -117,6 +118,7 @@ const translations = {
     cert_eh_title: "Ethical Hacker Course",
     cert_bc_title: "Programmer Bootcamp: Python, Java, C#",
     cert_ios_title: "iOS 26 & Swift 6: Beginner to Advanced",
+    cert_net_title: "Advanced Network Technologies",
     cert_py_date: "Oct 2026",
     cert_swift_date: "Oct 2017",
     footer_text: "Built with coffee and code ☕"
@@ -224,6 +226,7 @@ const translations = {
     b_testing: "🧪 Otomatik Test (Playwright)",
     b_uxdesign: "🎯 Ürün &amp; UX Tasarımı",
     b_auth: "🔒 Auth &amp; Güvenlik",
+    b_network: "🌐 Bilgisayar Ağları",
     b_sysdesign: "📐 Sistem Tasarımı",
     b_llm: "🧠 LLM Entegrasyonları",
 
@@ -239,6 +242,7 @@ const translations = {
     cert_eh_title: "Etik Hacker Olma Kursu",
     cert_bc_title: "Programcı Olma Kampı: Python, Java, C#",
     cert_ios_title: "iOS 26 & Swift 6: Başlangıçtan İleri Seviyeye",
+    cert_net_title: "İleri Ağ Teknolojileri",
     cert_py_date: "Eki 2026",
     cert_swift_date: "Eki 2017",
     footer_text: "Kahve ve kodla yapıldı ☕"
