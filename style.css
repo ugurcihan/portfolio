@@ -367,11 +367,6 @@ section:not(.hero) { padding: 30px 0; }
 
 /* STACK */
 .stack-intro { color: var(--dim); font-size: 1.02rem; max-width: 640px; margin-bottom: 36px; }
-.stack-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
-.stack-group h3 {
-  font-family: var(--hand); font-size: 1.35rem; color: var(--coral);
-  margin-bottom: 14px; transform: rotate(-1deg);
-}
 .stack-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .badge {
   background: var(--surface); border: 2px solid var(--ink); border-radius: 999px;
@@ -544,4 +539,117 @@ section:not(.hero) { padding: 30px 0; }
 @media (max-width: 520px) {
   .preview-links { gap: 4px 8px; padding: 0 8px; }
   .preview-links .preview-live-link { font-size: 0.85rem; padding: 8px 14px; margin-bottom: 10px; }
+}
+
+/* ============================================================
+   WEB SHOT BUTTON — glass pill that shoots silk at the pointer
+   (vanilla port of 21st.dev web-shot-button, see webshot.js)
+   ============================================================ */
+.ws-wrap { position: relative; isolation: isolate; display: inline-flex; color: var(--ink); }
+.ws-canvas { position: absolute; z-index: -1; pointer-events: none; }
+.ws-btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  height: 48px; padding: 0 28px; border-radius: 999px;
+  font-family: inherit; font-weight: 800; font-size: 0.95rem; letter-spacing: -0.01em; white-space: nowrap;
+  text-decoration: none; color: inherit; cursor: pointer; user-select: none; -webkit-tap-highlight-color: transparent;
+  background: rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(12px) saturate(1.5); backdrop-filter: blur(12px) saturate(1.5);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -12px 18px -10px rgba(0, 0, 0, 0.5),
+    inset 0 10px 16px -8px rgba(255, 255, 255, 0.1),
+    0 12px 28px -12px rgba(0, 0, 0, 0.7);
+  transition: transform .15s cubic-bezier(.3, .8, .3, 1);
+}
+.ws-btn:active { transform: scale(0.96); }
+.ws-btn:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+.ws-hl { position: absolute; pointer-events: none; border-radius: 999px; }
+.ws-hl-top { inset: 2px 7% auto 7%; height: 48%; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0)); }
+.ws-hl-bottom { inset: auto 20% 2px 20%; height: 34%; background: linear-gradient(to top, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0)); filter: blur(2px); }
+.ws-label { position: relative; display: inline-flex; align-items: center; gap: 8px; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.35); }
+.ws-label .hello-count { margin-left: 2px; }
+.ws-tone-light .ws-label { text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6); }
+@media (prefers-reduced-motion: reduce) { .ws-btn { transition: none; } }
+
+/* ============================================================
+   HALFTONE NAME — the hero name printed in dots (see halftone-name.js)
+   ============================================================ */
+.glow-name-wrap.ht-on { position: relative; }
+.glow-name-wrap.ht-on h1.glow-name {
+  position: absolute; width: 1px; height: 1px; margin: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap;
+}
+.glow-name-wrap.ht-on .glow-name-spot { display: none; }
+.ht-canvas { position: absolute; left: 0; top: 0; display: block; max-width: none; pointer-events: none; }
+
+/* ============================================================
+   PROJECT RAIL — projects hung on a clothes rail (see project-rail.js)
+   ============================================================ */
+.pr-root { margin: 0 0 40px; }
+.pr-root .grp-label { margin: 0 0 6px; }
+.pr-defs { position: absolute; }
+.pr-stage { --u: 1px; position: relative; width: 100%; margin-top: 8px; overflow-x: clip; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.pr-rail {
+  position: absolute; left: -10px; right: -10px; top: 13px; height: 7px; border-radius: 999px;
+  background: linear-gradient(#ececec, #8d8d8d 55%, #4b4b4b); box-shadow: 0 7px 14px rgba(0, 0, 0, .5);
+}
+.pr-slot {
+  position: absolute; left: 0; top: 16px; padding: 0; border: 0; background: none; color: inherit; font: inherit;
+  cursor: pointer; -webkit-tap-highlight-color: transparent; will-change: transform;
+}
+.pr-slot:focus-visible { outline: none; }
+.pr-slot:focus-visible .pr-card { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.pr-swing, .pr-turn { position: absolute; inset: 0; display: block; }
+.pr-swing { transform-origin: 50% 0; }
+.pr-turn { transform-origin: 50% 45%; }
+.pr-hanger { position: absolute; left: 0; top: 0; width: 100%; height: calc(var(--u) * 60); overflow: visible; }
+.pr-card, .pr-shade {
+  position: absolute; left: calc(var(--u) * 25); top: calc(var(--u) * 58); width: calc(var(--u) * 150); height: calc(var(--u) * 238);
+  border-radius: 4px;
+}
+.pr-card {
+  display: flex; flex-direction: column; overflow: hidden; background: var(--c); color: var(--ink-dark);
+  border: 2px solid var(--ink); box-shadow: 4px 7px 16px rgba(0, 0, 0, .45);
+}
+.pr-shot { display: block; width: 100%; flex: 1 1 0; min-height: 0; object-fit: cover; object-position: left top; background: #111; border-bottom: 2px solid var(--ink-dark); }
+.pr-label { display: flex; align-items: center; gap: 6px; flex: none; padding: 6px 8px; font-family: var(--hand); font-weight: 700; font-size: max(15px, calc(var(--u) * 18)); line-height: 1.05; text-align: left; }
+.pr-ico { font-size: 1.1em; }
+.pr-shade { background: #000; opacity: 0; pointer-events: none; }
+.pr-caption { min-height: 96px; margin-top: 2px; text-align: center; }
+.pr-cap-title { font-family: var(--hand); font-size: 2rem; line-height: 1.1; }
+.pr-cap-tag { color: var(--dim); font-weight: 600; margin: 2px auto 0; max-width: 560px; }
+.pr-cap-open {
+  margin-top: 10px; padding: 6px 18px; border: 2px solid var(--ink); border-radius: 999px; background: transparent; color: var(--ink);
+  font: inherit; font-weight: 800; font-size: .88rem; cursor: pointer; transition: background .15s, color .15s;
+}
+.pr-cap-open:hover, .pr-cap-open:focus-visible { background: var(--ink); color: var(--bg); }
+.pr-cap-open[hidden] { display: none; }
+.pr-hint { margin-top: 6px; text-align: center; color: var(--dim); font-size: .82rem; font-weight: 700; }
+.pr-root.pr-has-active .pr-hint { visibility: hidden; }
+
+.project-grid [hidden] { display: none !important; }
+
+/* ============================================================
+   HOW I BUILD — technology logos on a turning sphere (see icon-cloud.js)
+   ============================================================ */
+.stack-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 44px; align-items: center; }
+.stack-copy .stack-intro { max-width: 560px; margin-bottom: 24px; }
+.stack-skills { gap: 10px; }
+.stack-skills .badge { padding: 8px 14px; font-size: 0.8rem; }
+.icon-cloud { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1; margin-inline: auto; touch-action: pan-y; -webkit-user-select: none; user-select: none; }
+.icon-cloud::before {
+  content: ""; position: absolute; inset: 7%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle at 50% 42%, rgba(255, 207, 86, 0.09), rgba(47, 184, 166, 0.04) 55%, transparent 72%);
+  border: 2px dashed rgba(245, 236, 217, 0.11);
+}
+.icon-cloud-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-content: center; height: 100%; }
+.icon-cloud-list img { display: block; width: 42px; height: 42px; }
+.icon-cloud.is-live { cursor: grab; }
+.icon-cloud.is-live:active { cursor: grabbing; }
+.icon-cloud.is-live .icon-cloud-list { display: block; position: absolute; inset: 0; }
+.icon-cloud.is-live li { position: absolute; left: 50%; top: 50%; will-change: transform, opacity; }
+.icon-cloud.is-live li img { width: var(--ic, 42px); height: var(--ic, 42px); pointer-events: none; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.35)); }
+@media (max-width: 860px) {
+  .stack-layout { grid-template-columns: 1fr; gap: 28px; }
+  .icon-cloud { max-width: 380px; }
 }

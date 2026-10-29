@@ -117,7 +117,7 @@
             <p class="subtitle" data-i18n="hero_subtitle">I turn ideas into working products — coffee, code, and a bit of stubbornness. ✨</p>
             <div class="hero-actions">
               <a href="#projects" class="btn btn-coral" data-i18n="btn_projects">See My Projects</a>
-              <a href="#contact" class="btn btn-outline" id="helloBtn"><span data-i18n="btn_contact">Say Hello 👋</span><span class="hello-count" id="helloCount" hidden></span></a>
+              <a href="#contact" id="helloBtn" data-webshot><span data-i18n="btn_contact">Say Hello 👋</span><span class="hello-count" id="helloCount" hidden></span></a>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@
         <p class="tags">#nextjs #supabase #saas</p>
       </article>
 
-      <article class="reveal sticky teal r1 previewable" tabindex="0" role="button" aria-haspopup="dialog" data-preview="assets/previews/lifecheck.webp" data-preview-title="LifeCheck Mobility" data-links="web|https://lifecheak-main.web.app/;;appstore|https://apps.apple.com/tr/app/lifecheck-mobility/id6781236086;;play|https://play.google.com/store/apps/details?id=com.lifecheak.mobility"><span class="pin" aria-hidden="true">📌</span>
+      <article class="reveal sticky teal r1 previewable" tabindex="0" role="button" aria-haspopup="dialog" data-preview="assets/previews/lifecheck-v2.webp" data-preview-title="LifeCheck Mobility" data-links="web|https://lifecheckmobility.com/;;appstore|https://apps.apple.com/tr/app/lifecheck-mobility/id6781236086;;play|https://play.google.com/store/apps/details?id=com.lifecheak.mobility"><span class="pin" aria-hidden="true">📌</span>
         <span class="icon" aria-hidden="true">🚑</span><h4>LifeCheck Mobility</h4>
         <p class="tagline" data-i18n="p3_tagline">Personal safety &amp; emergency assistant</p>
         <p class="desc" data-i18n="p3_desc">Alerts your loved ones automatically if something happens — walking home alone, on a motorcycle trip, or facing a health risk. Live on the App Store and Google Play.</p>
@@ -228,15 +228,6 @@
         <p class="tags">#nextjs #aisdk</p>
       </article>
 
-      <article class="reveal sticky teal r1 soon">
-        <span class="pin" aria-hidden="true">📌</span>
-        <span class="stamp" data-i18n="soon_stamp">COMING SOON</span>
-        <span class="icon" aria-hidden="true">🔥</span><h4>VulcanGuard</h4>
-        <p class="tagline" data-i18n="p15_tagline">Home &amp; family disaster-safety app — wildfire first</p>
-        <p class="desc" data-i18n="p15_desc">Built around reassurance, not information: a night-time alarm that can wake a family even when the phone is on silent, a family safety circle with “I'm safe” check-ins, and multi-property evacuation plans. Hazard data comes from satellite feeds with a stated delay — every alert shows its source and timestamp, and it never replaces 112 or official warnings. In planning.</p>
-        <p class="tags">#mobile #reactnative #fastapi #postgis #safety</p>
-      </article>
-
 
       <h3 class="grp-label" data-i18n="grp_engineering">Engineering &amp; Open Source</h3>
 
@@ -245,17 +236,6 @@
         <p class="tagline" data-i18n="p14_tagline">Gridspark — EV charging network backend: OCPP station comms + OCPI roaming</p>
         <p class="desc" data-i18n="p14_desc">A from-scratch EV charging platform covering both protocols a real network runs on, in one process: real OCPP-J session framing (BootNotification through StopTransaction, periodic MeterValues) for talking to charge points, and the real OCPI registration handshake (Token A/B/C) plus Locations/CDR settlement for roaming partners — with a live, tabbed operations console. Dockerized, open source.</p>
         <p class="tags">#ev-charging #ocpp #ocpi #websocket #docker</p>
-      </article>
-
-      <article class="reveal sticky yellow r2 oss-card">
-        <span class="pin" aria-hidden="true">📌</span>
-        <span class="icon" aria-hidden="true">🧩</span><h4>Open Source</h4>
-        <p class="tagline" data-i18n="oss_tagline">Contributions to open-source EV-charging projects</p>
-        <ul class="oss-list">
-          <li><a href="https://github.com/mobilityhouse/ocpp/pull/776" target="_blank" rel="noopener">mobilityhouse/ocpp #776 ↗</a><span data-i18n="oss_desc1">Added 91 classes missing from the OCPP 2.1 spec to a widely used Python OCPP library, with regression tests.</span></li>
-          <li><a href="https://github.com/steve-community/steve/pull/2143" target="_blank" rel="noopener">steve-community/steve #2143 ↗</a><span data-i18n="oss_desc2">Hardened the Docker Compose setup of a production OCPP server: closed the database port to the host, added an isolated network.</span></li>
-        </ul>
-        <p class="tags">#ocpp #open-source #python #docker</p>
       </article>
 
       <article class="reveal sticky teal r2 previewable" tabindex="0" role="button" aria-haspopup="dialog" data-preview="assets/previews/the-bug.webp" data-preview-title="The Bug" data-live="https://the-bug-website.vercel.app/"><span class="pin" aria-hidden="true">📌</span>
@@ -313,70 +293,52 @@
         <p class="tags">#adtech</p>
       </article>
 
-      <article class="reveal sticky confidential r2">
-        <span class="stamp">CONFIDENTIAL</span>
-        <span class="icon" aria-hidden="true">🔒</span><h4 data-i18n="p9_title">Confidential Work</h4>
-        <p class="tagline" data-i18n="p9_tagline">NDA-protected client projects</p>
-        <p class="desc" data-i18n="p9_desc">Some of the products I've built live under client confidentiality agreements and can't be listed here — happy to walk through specifics in a conversation.</p>
-        <p class="tags">#nda #confidential</p>
-      </article>
-
     </div>
   </section>
 
   <section id="stack" class="stack">
     <h2 class="section-title" data-i18n="stack_title">How I Build</h2>
-    <p class="stack-intro" data-i18n="stack_intro">I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀</p>
-
-    <div class="stack-groups">
-      <div class="reveal stack-group">
-        <h3 data-i18n="grp_lang">Languages</h3>
-        <div class="stack-row">
-          <span class="badge">🐍 Python</span>
-          <span class="badge">🟨 JavaScript / TypeScript</span>
-          <span class="badge">🐦 Swift</span>
-          <span class="badge">🤖 Kotlin</span>
-          <span class="badge">🗃️ SQL</span>
-          <span class="badge">📟 Bash / Shell</span>
-        </div>
-      </div>
-      <div class="reveal stack-group">
-        <h3 data-i18n="grp_mobile">Mobile</h3>
-        <div class="stack-row">
-          <span class="badge">📱 Flutter</span>
-          <span class="badge" data-i18n="b_ios">🍎 iOS (live on the App Store)</span>
-          <span class="badge" data-i18n="b_android">🤖 Android (on Google Play)</span>
-        </div>
-      </div>
-      <div class="reveal stack-group">
-        <h3 data-i18n="grp_web">Web &amp; Backend</h3>
-        <div class="stack-row">
-          <span class="badge">⚛️ Next.js / React</span>
-          <span class="badge">🟢 Node.js</span>
-          <span class="badge">🗄️ Supabase / Postgres</span>
-          <span class="badge">🔥 Firebase</span>
+    <div class="stack-layout">
+      <div class="stack-copy">
+        <p class="stack-intro" data-i18n="stack_intro">I move comfortably across languages and platforms — from web to mobile, backend to automation, I build whatever the problem needs. I have apps live on both iOS and Android. 🚀</p>
+        <div class="stack-row stack-skills">
           <span class="badge" data-i18n="b_restapi">🔗 REST &amp; GraphQL APIs</span>
-          <span class="badge">🐳 Docker</span>
-          <span class="badge">▲ Vercel</span>
-        </div>
-      </div>
-      <div class="reveal stack-group">
-        <h3 data-i18n="grp_tools">Tools &amp; Workflow</h3>
-        <div class="stack-row">
-          <span class="badge">🧰 VS Code</span>
-          <span class="badge">🔧 Git &amp; CI/CD</span>
           <span class="badge" data-i18n="b_testing">🧪 Automated Testing (Playwright)</span>
           <span class="badge" data-i18n="b_sysdesign">📐 System Design</span>
-        </div>
-      </div>
-      <div class="reveal stack-group">
-        <h3 data-i18n="grp_ai">Security &amp; AI</h3>
-        <div class="stack-row">
           <span class="badge" data-i18n="b_auth">🔒 Auth &amp; Security</span>
           <span class="badge" data-i18n="b_network">🌐 Computer Networking</span>
           <span class="badge" data-i18n="b_llm">🧠 LLM Integrations</span>
           <span class="badge" data-i18n="b_uxdesign">🎯 Product &amp; UX Design</span>
         </div>
+      </div>
+      <div class="icon-cloud" id="iconCloud" role="group" aria-label="Technologies I work with">
+        <ul class="icon-cloud-list">
+            <li title="Python"><img src="assets/stack/python.svg" alt="Python" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="JavaScript"><img src="assets/stack/javascript.svg" alt="JavaScript" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="TypeScript"><img src="assets/stack/typescript.svg" alt="TypeScript" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Swift"><img src="assets/stack/swift.svg" alt="Swift" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Kotlin"><img src="assets/stack/kotlin.svg" alt="Kotlin" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Dart"><img src="assets/stack/dart.svg" alt="Dart" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Flutter"><img src="assets/stack/flutter.svg" alt="Flutter" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="iOS"><img src="assets/stack/apple.svg" alt="iOS" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Android"><img src="assets/stack/android.svg" alt="Android" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="React"><img src="assets/stack/react.svg" alt="React" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Next.js"><img src="assets/stack/nextdotjs.svg" alt="Next.js" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Node.js"><img src="assets/stack/nodedotjs.svg" alt="Node.js" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Supabase"><img src="assets/stack/supabase.svg" alt="Supabase" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="PostgreSQL"><img src="assets/stack/postgresql.svg" alt="PostgreSQL" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Firebase"><img src="assets/stack/firebase.svg" alt="Firebase" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="GraphQL"><img src="assets/stack/graphql.svg" alt="GraphQL" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Docker"><img src="assets/stack/docker.svg" alt="Docker" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Vercel"><img src="assets/stack/vercel.svg" alt="Vercel" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Git"><img src="assets/stack/git.svg" alt="Git" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="GitHub"><img src="assets/stack/github.svg" alt="GitHub" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="CI/CD (GitHub Actions)"><img src="assets/stack/githubactions.svg" alt="CI/CD (GitHub Actions)" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Bash / Shell"><img src="assets/stack/gnubash.svg" alt="Bash / Shell" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="LLM integrations (Gemini)"><img src="assets/stack/googlegemini.svg" alt="LLM integrations (Gemini)" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="App Store"><img src="assets/stack/appstore.svg" alt="App Store" width="42" height="42" loading="lazy" draggable="false"></li>
+            <li title="Google Play"><img src="assets/stack/googleplay.svg" alt="Google Play" width="42" height="42" loading="lazy" draggable="false"></li>
+        </ul>
       </div>
     </div>
   </section>
@@ -511,6 +473,10 @@
 
 <script src="i18n.js"></script>
 <script src="interactions.js"></script>
+<script src="webshot.js"></script>
+<script src="halftone-name.js"></script>
+<script src="project-rail.js"></script>
+<script src="icon-cloud.js"></script>
 <!-- Vercel Web Analytics (cookieless). Enable it under Project → Analytics in the Vercel dashboard. -->
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
