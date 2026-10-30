@@ -112,14 +112,12 @@
       slot.style.setProperty('--c', colorOf(card));
       slot.setAttribute('aria-label', card.dataset.previewTitle || 'Project');
       slot.tabIndex = i === 0 ? 0 : -1;
-      var icon = card.querySelector('.icon');
       slot.innerHTML =
         '<span class="pr-swing"><span class="pr-turn">' + HANGER +
         '<span class="pr-card"><img class="pr-shot" alt="" draggable="false" loading="lazy">' +
-        '<span class="pr-label"><span class="pr-ico" aria-hidden="true"></span><span class="pr-name"></span></span></span>' +
+        '<span class="pr-label"><span class="pr-name"></span></span></span>' +
         '<span class="pr-shade"></span></span></span>';
       slot.querySelector('.pr-shot').src = card.dataset.preview;
-      slot.querySelector('.pr-ico').textContent = icon ? icon.textContent : '';
       slot.querySelector('.pr-name').textContent = card.dataset.previewTitle || '';
       stage.appendChild(slot);
       slots.push(slot);

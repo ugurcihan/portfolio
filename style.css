@@ -601,12 +601,11 @@ section:not(.hero) { padding: 30px 0; }
   border: 2px solid var(--ink); box-shadow: 4px 7px 16px rgba(0, 0, 0, .45);
 }
 .pr-shot { display: block; width: 100%; flex: 1 1 0; min-height: 0; object-fit: cover; object-position: left top; background: #111; border-bottom: 2px solid var(--ink-dark); }
-.pr-label { display: flex; align-items: center; gap: 6px; flex: none; padding: 6px 8px; font-family: var(--hand); font-weight: 700; font-size: max(15px, calc(var(--u) * 18)); line-height: 1.05; text-align: left; }
-.pr-ico { font-size: 1.1em; }
+.pr-label { display: flex; align-items: center; justify-content: center; gap: 6px; flex: none; padding: 9px 11px; font-family: var(--sans); font-weight: 800; font-size: max(11px, calc(var(--u) * 12.5)); line-height: 1.2; letter-spacing: 0.005em; text-align: center; -webkit-font-smoothing: antialiased; }
 .pr-shade { background: #000; opacity: 0; pointer-events: none; }
 .pr-caption { min-height: 96px; margin-top: 2px; text-align: center; }
-.pr-cap-title { font-family: var(--hand); font-size: 2rem; line-height: 1.1; }
-.pr-cap-tag { color: var(--dim); font-weight: 600; margin: 2px auto 0; max-width: 560px; }
+.pr-cap-title { font-family: var(--sans); font-weight: 800; font-size: clamp(1.5rem, 2.4vw, 1.9rem); line-height: 1.15; letter-spacing: -0.02em; color: var(--ink); }
+.pr-cap-tag { color: var(--dim); font-size: 0.95rem; font-weight: 600; line-height: 1.55; margin: 6px auto 0; max-width: 540px; text-wrap: balance; }
 .pr-cap-open {
   margin-top: 10px; padding: 6px 18px; border: 2px solid var(--ink); border-radius: 999px; background: transparent; color: var(--ink);
   font: inherit; font-weight: 800; font-size: .88rem; cursor: pointer; transition: background .15s, color .15s;
