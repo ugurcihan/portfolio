@@ -378,17 +378,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /* Visitor + hello counters (abacus.jasoncameron.dev). Visits count once per browser per 24h;
    every Say Hello click counts. Fails silently (the counters just stay hidden).
-   Add ?nocount to the URL once to exclude your own browser. */
+   Add ?nocount to the URL once to exclude your own browser, ?count to count this browser again. */
 document.addEventListener('DOMContentLoaded', () => {
   const API = 'https://abacus.jasoncameron.dev';
   const NS = 'ugurcihancekic-com';
   const VISITS_BASE = 3000; // starting offset for the visitor counter
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
-    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} },
+    del(k) { try { localStorage.removeItem(k); } catch (e) {} }
   };
   const live = /^https?:$/.test(location.protocol) && !/^(localhost|127\.|\[::1\])/.test(location.hostname);
   if (/[?&]nocount\b/.test(location.search)) store.set('nocount', '1');
+  if (/[?&]count\b/.test(location.search)) store.del('nocount');
   const counting = live && !store.get('nocount') && !navigator.webdriver;
 
   const call = async (action, key) => {
@@ -412,15 +414,15 @@ document.addEventListener('DOMContentLoaded', () => {
     visitorsEl.hidden = false;
   }).catch(() => {});
 
-  call('get', 'hellos').then((v) => {
-    helloCount.textContent = fmt(v);
-    helloCount.hidden = false;
-  }).catch(() => {});
+  let hellos = null; // last known count, so a click can show +1 at once instead of waiting for the server
+  const showHellos = () => { helloCount.textContent = fmt(hellos); helloCount.hidden = false; };
+  call('get', 'hellos').then((v) => { hellos = v; showHellos(); }).catch(() => {});
 
   if (helloBtn) helloBtn.addEventListener('click', (e) => {
     e.preventDefault(); // counter only: no scrolling to #contact
+    if (counting && hellos !== null) { hellos += 1; showHellos(); }
     helloCount.classList.remove('pop'); void helloCount.offsetWidth; helloCount.classList.add('pop');
     if (!counting) return;
-    call('hit', 'hellos').then((v) => { helloCount.textContent = fmt(v); helloCount.hidden = false; }).catch(() => {});
+    call('hit', 'hellos').then((v) => { hellos = v; showHellos(); }).catch(() => {});
   });
 });

@@ -128,11 +128,58 @@
 
   <section id="about" class="about">
     <h2 class="section-title" data-i18n="about_title">About Me</h2>
-    <div class="about-grid">
-      <p class="about-text" data-i18n="about_text">I build products end to end — idea, design, engineering, launch. My journey with software began in 2017 with a Swift course, and I went all in after I couldn't find a developer for my first idea. I've been shipping my own products to real users ever since: KuExpo, an AI-powered event-management platform, is live on the App Store and Google Play, and LifeCheck Mobility, a personal-safety app, is live on the App Store and Google Play. Lately I've gone deep on EV-charging infrastructure — building Gridspark and contributing to open-source OCPP projects used across the industry. I'm open to bringing that builder instinct into a team with the scale to take it further.</p>
-      <div class="reveal sticky-mini yellow" data-i18n="mini1">Product-minded 🎯</div>
-      <div class="reveal sticky-mini teal" data-i18n="mini2">End-to-end execution 🚀</div>
-      <div class="reveal sticky-mini coral" data-i18n="mini3">Cross-platform: Web, iOS, Android 📱</div>
+    <div class="about-wrap">
+      <div class="term reveal" id="aboutTerm">
+        <div class="term-bar" aria-hidden="true"><i class="r"></i><i class="y"></i><i class="g"></i><span>ugur@portfolio ~ chat</span></div>
+        <div class="term-screen">
+          <canvas class="term-rain" aria-hidden="true"></canvas>
+          <div class="term-row term-q"><span class="term-prompt" aria-hidden="true">&gt;</span><div class="term-text"><span class="term-real" data-i18n="about_q">who are you?</span><span class="term-live" aria-hidden="true"></span></div></div>
+          <div class="term-row term-a"><span class="term-prompt" aria-hidden="true">$</span><div class="term-text"><span class="term-think" aria-hidden="true" hidden><b></b><b></b><b></b></span><span class="term-real" data-i18n="about_text">I build products end to end — idea, design, engineering, launch. My journey with software began in 2017 with a Swift course, and I went all in after I couldn't find a developer for my first idea. I've been shipping my own products to real users ever since: KuExpo, an AI-powered event-management platform, is live on the App Store and Google Play, and LifeCheck Mobility, a personal-safety app, is live on the App Store and Google Play. These days I'm also writing a book: Makineyle Aynı Masada, a calm, plain-language guide to living with AI (in Turkish, coming soon).</span><span class="term-live" aria-hidden="true"></span></div></div>
+          <div class="term-row term-log"><span class="term-prompt" aria-hidden="true">&gt;</span><div class="term-text"><span id="termLogText" data-i18n="term_hint">open a locker ↓</span></div></div>
+        </div>
+      </div>
+      <div class="lk-bank reveal" id="lockerBank" role="group" aria-label="Facts about me, one per locker">
+        <button type="button" class="lk" style="--c:#8ff7c8" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7 3 12l5 5M16 7l5 5-5 5M13.5 5l-3 14"/></svg></span><span class="lk-t" data-i18n="lk1_t">2017</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">01</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk1_d">A Swift course: where software started for me.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#ffcf56" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg></span><span class="lk-t" data-i18n="lk2_t">The pivot</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">02</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk2_d">No developer for my first idea, so I became one.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#ff7a5c" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M12 12.5l1 2 2.2.3-1.6 1.5.4 2.2-2-1.1-2 1.1.4-2.2-1.6-1.5 2.2-.3z"/></svg></span><span class="lk-t" data-i18n="lk3_t">KuExpo</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">03</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk3_d">AI-powered event management. Live on the App Store and Google Play.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#2fb8a6" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 5 6v5.5c0 4.3 2.9 7.7 7 9.5 4.1-1.8 7-5.2 7-9.5V6l-7-3z"/><path d="m8.8 12 2.2 2.2 4.2-4.4"/></svg></span><span class="lk-t" data-i18n="lk4_t">LifeCheck</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">04</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk4_d">Personal-safety app. Live on the App Store and Google Play.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#ffcf56" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6.5C10.3 5.2 7.8 4.6 4 4.8v13c3.8-.2 6.3.4 8 1.7 1.7-1.3 4.2-1.9 8-1.7v-13c-3.8-.2-6.3.4-8 1.7zM12 6.5v13"/></svg></span><span class="lk-t" data-i18n="lk5_t">The book</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">05</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk5_d">Makineyle Aynı Masada: a plain-language guide to living with AI. Coming soon.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#8ff7c8" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.5 18.5h3M10.5 5h3"/></svg></span><span class="lk-t" data-i18n="lk6_t">Mobile</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">06</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk6_d">Apps live on both the App Store and Google Play.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#2fb8a6" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9S14.6 18.4 12 21c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></svg></span><span class="lk-t" data-i18n="lk7_t">Web</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">07</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk7_d">Websites and web apps, from design to deploy.</span>
+        </button>
+        <button type="button" class="lk" style="--c:#ff7a5c" aria-expanded="false">
+          <span class="lk-in"><span class="lk-item"><span class="lk-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2.5 9.5 9.5-4.5 9.5 4.5-9.5 4.5z"/><path d="M6.5 11.5v4.3c1.4 1.5 3.3 2.2 5.5 2.2s4.1-.7 5.5-2.2v-4.3M21.5 9.5v5"/></svg></span><span class="lk-t" data-i18n="lk8_t">Certificates</span></span></span>
+          <span class="lk-door" aria-hidden="true"><span class="lk-vents"></span><span class="lk-no">08</span><span class="lk-handle"></span></span>
+          <span class="lk-d sr-only" data-i18n="lk8_d">SQL Intermediate, BTK Akademi Advanced Network Technologies.</span>
+        </button>
+      </div>
     </div>
   </section>
 
@@ -477,6 +524,7 @@
 <script src="halftone-name.js"></script>
 <script src="project-rail.js"></script>
 <script src="icon-cloud.js"></script>
+<script src="about.js"></script>
 <!-- Vercel Web Analytics (cookieless). Enable it under Project → Analytics in the Vercel dashboard. -->
 <script defer src="/_vercel/insights/script.js"></script>
 </body>
