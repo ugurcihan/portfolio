@@ -164,7 +164,7 @@ input:checked ~ .bz-box svg, input:checked + .bz-box svg { stroke-dashoffset: 0;
 .bz-faq details[open] summary::after { transform: rotate(45deg); }
 .bz-faq summary::-webkit-details-marker { display: none; }
 .bz-faq p { padding: 0 0 16px; color: var(--dim); }
-.bz-contact { text-align: center; padding: 64px 0 48px; }
+.bz-contact { padding: 56px 0 48px; }
 .bz-footer { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 22px 0 90px; border-top: 1px solid var(--line); color: var(--dim); font-size: 0.88rem; }
 .bz-footer a { text-decoration: none; }
 .bz-footer a:hover { color: var(--ink); }
@@ -172,6 +172,32 @@ input:checked ~ .bz-box svg, input:checked + .bz-box svg { stroke-dashoffset: 0;
 
 /* ---- mobil alt çubuk ---- */
 .bz-bottombar { display: none; }
+
+/* ---- teklif penceresi ---- */
+.bz-dlg { margin: auto; border: 0; padding: 0; background: transparent; max-width: min(560px, 100% - 24px); width: 100%; color: var(--ink); }
+.bz-dlg::backdrop { background: rgba(10, 8, 6, 0.72); backdrop-filter: blur(3px); }
+.bz-dlg[open] { animation: bz-in .25s ease both; }
+.bz-dlg-card { position: relative; padding: 24px; border: 2px solid var(--ink); border-radius: 10px; background: var(--surface); box-shadow: 6px 6px 0 var(--ink); }
+.bz-dlg-card h2 { font-family: var(--hand); font-size: 2rem; line-height: 1.1; padding-right: 36px; }
+.bz-dlg-sub { color: var(--dim); margin: 6px 0 14px; font-size: 0.93rem; }
+.bz-dlg-x { position: absolute; top: 12px; right: 14px; width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line); background: transparent; color: var(--ink); font-size: 1.4rem; line-height: 1; cursor: pointer; }
+.bz-dlg-x:hover { border-color: var(--ink); }
+.bz-dlg-text { width: 100%; resize: vertical; padding: 12px; border: 2px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink); font: 0.84rem/1.5 ui-monospace, "SF Mono", Menlo, monospace; }
+.bz-dlg-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.bz-dlg-actions .bz-btn { padding: 10px 18px; font-size: 0.9rem; box-shadow: 3px 3px 0 var(--ink); }
+.bz-dlg-note { margin-top: 14px; color: var(--dim); font-size: 0.85rem; }
+.bz-linkbtn { background: none; border: 0; color: var(--yellow); font: inherit; font-weight: 800; text-decoration: underline; cursor: pointer; padding: 0; }
+.bz-dlg-ok { min-height: 1.4em; margin-top: 6px; color: var(--teal); font-weight: 800; font-size: 0.9rem; }
+.bz-contact { text-align: left; }
+.bz-contact-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 16px; }
+.bz-ccard { padding: 22px; border: 2px solid var(--line); border-radius: 8px; background: var(--surface); display: flex; flex-direction: column; gap: 6px; }
+.bz-ccard-main { border-color: var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.bz-ccard h3 { font-size: 1.05rem; }
+.bz-ccard p { color: var(--dim); font-size: 0.92rem; }
+.bz-addr { color: var(--ink) !important; font-weight: 800; font-size: 1.15rem !important; word-break: break-all; user-select: all; }
+.bz-ccard-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 12px; }
+.bz-ccard-actions .bz-btn-sm { padding: 8px 16px; }
+@media (max-width: 920px) { .bz-contact-grid { grid-template-columns: 1fr; } }
 
 @media (max-width: 920px) {
   .bz-calc-grid { grid-template-columns: 1fr; }

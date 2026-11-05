@@ -248,21 +248,58 @@
   </section>
 
   <section class="bz-section bz-contact" id="iletisim" aria-labelledby="ilet-baslik">
-    <h2 id="ilet-baslik" class="bz-h2">Projeni anlat</h2>
-    <p class="bz-sub">Birkaç cümle yeter. Genelde aynı gün dönüş yaparım.</p>
-    <a class="bz-btn bz-btn-big" href="mailto:ugurcihancekic@gmail.com?subject=Proje%20hakk%C4%B1nda">ugurcihancekic@gmail.com</a>
+    <h2 id="ilet-baslik" class="bz-h2">Projeni anlat, ulaşalım</h2>
+    <p class="bz-sub">Birkaç cümle yeter. Aşağıdaki yollardan biriyle bana yazabilirsin.</p>
+    <div class="bz-contact-grid">
+      <div class="bz-ccard bz-ccard-main">
+        <h3>E-posta</h3>
+        <p class="bz-addr">ugurcihancekic@gmail.com</p>
+        <div class="bz-ccard-actions">
+          <a class="bz-btn bz-btn-sm" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=ugurcihancekic%40gmail.com&amp;su=Proje%20hakk%C4%B1nda" target="_blank" rel="noopener">Gmail'de yaz</a>
+          <a class="bz-btn bz-btn-sm bz-btn-ghost" href="mailto:ugurcihancekic@gmail.com?subject=Proje%20hakk%C4%B1nda">E-posta uygulamasında aç</a>
+          <button type="button" class="bz-btn bz-btn-sm bz-btn-ghost" id="bzCopyContact">Adresi kopyala</button>
+        </div>
+      </div>
+      <div class="bz-ccard">
+        <h3>LinkedIn</h3>
+        <p>Profilimden mesaj gönderebilirsin.</p>
+        <div class="bz-ccard-actions"><a class="bz-btn bz-btn-sm bz-btn-ghost" href="https://www.linkedin.com/in/ugurcihanc/" target="_blank" rel="noopener">Profili aç</a></div>
+      </div>
+      <div class="bz-ccard">
+        <h3>GitHub</h3>
+        <p>Kod ve açık kaynak çalışmalarım.</p>
+        <div class="bz-ccard-actions"><a class="bz-btn bz-btn-sm bz-btn-ghost" href="https://github.com/ugurcihan" target="_blank" rel="noopener">Profili aç</a></div>
+      </div>
+    </div>
   </section>
 </main>
 
 <footer class="bz-footer">
   <a href="/">← Ana sayfaya dön</a>
-  <span>© <span id="bzYear">2026</span> Uğur Cihan Çekiç</span>
+  <span>© <span id="bzYear">2026</span> Uğur Cihan Çekiç · <a href="mailto:ugurcihancekic@gmail.com">ugurcihancekic@gmail.com</a></span>
 </footer>
 
 <div class="bz-bottombar" id="bzBottom" aria-hidden="true">
   <div><small>Tahmini</small><strong id="bzBottomTotal">0</strong></div>
   <a class="bz-btn bz-btn-sm" id="bzBottomCta" href="mailto:ugurcihancekic@gmail.com">Teklif iste</a>
 </div>
+
+
+<dialog class="bz-dlg" id="bzDlg" aria-labelledby="bzDlgTitle">
+  <div class="bz-dlg-card">
+    <button type="button" class="bz-dlg-x" id="bzDlgClose" aria-label="Kapat">×</button>
+    <h2 id="bzDlgTitle">Teklif talebini gönder</h2>
+    <p class="bz-dlg-sub">Seçimlerin aşağıdaki metne hazırlandı. Sana uyan yolla gönder:</p>
+    <textarea id="bzDlgText" class="bz-dlg-text" readonly rows="10" aria-label="Teklif talebi metni"></textarea>
+    <div class="bz-dlg-actions">
+      <a class="bz-btn" id="bzGmail" href="https://mail.google.com/" target="_blank" rel="noopener">Gmail'de aç</a>
+      <a class="bz-btn bz-btn-ghost" id="bzMailto" href="mailto:ugurcihancekic@gmail.com">E-posta uygulamasında aç</a>
+      <button type="button" class="bz-btn bz-btn-ghost" id="bzCopy">Metni kopyala</button>
+    </div>
+    <p class="bz-dlg-note">Gönderim adresi: <b>ugurcihancekic@gmail.com</b> <button type="button" class="bz-linkbtn" id="bzCopyAddr">Adresi kopyala</button></p>
+    <p class="bz-dlg-ok" id="bzDlgOk" role="status" aria-live="polite"></p>
+  </div>
+</dialog>
 
 <script src="/business/business.js"></script>
 </body>

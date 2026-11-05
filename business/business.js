@@ -171,7 +171,7 @@
     markPreset();
   }
 
-  function mailto(c) {
+  function message(c) {
     var lines = ['Merhaba Uğur,', '', 'Fiyat hesaplayıcıyla şu kapsamı seçtim:', '', 'Proje tipi: ' + c.type.name + ' (' + tl(c.type.base) + ')'];
     if (c.items.length) {
       lines.push('', 'Ek seçenekler:');
@@ -181,9 +181,56 @@
     lines.push('', 'Tahmini toplam: ' + tl(c.once) + ' (KDV hariç)', 'Tahmini süre: ≈ ' + c.weeks + ' hafta');
     if (c.monthly) lines.push('Aylık bakım: ' + tl(c.monthly) + ' /ay');
     lines.push('', 'Projem hakkında: ');
-    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Teklif talebi: ' + c.type.name + ' (≈ ' + tl(c.once) + ')') +
-      '&body=' + encodeURIComponent(lines.join('\n'));
+    return { subject: 'Teklif talebi: ' + c.type.name + ' (≈ ' + tl(c.once) + ')', body: lines.join('\n') };
   }
+  var current = null;
+  function mailto(c) {
+    current = message(c);
+    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(current.subject) + '&body=' + encodeURIComponent(current.body);
+  }
+
+  /* ---- teklif penceresi: e-posta uygulaması yoksa da çalışsın ---- */
+  var dlg = $('bzDlg');
+  function copyText(text, okMsg) {
+    var ok = $('bzDlgOk');
+    function done() { if (ok) { ok.textContent = okMsg; setTimeout(function () { if (ok.textContent === okMsg) ok.textContent = ''; }, 3500); } }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, fallback);
+    } else { fallback(); }
+    function fallback() {
+      var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (e) { if (ok) ok.textContent = 'Kopyalanamadı, metni elle seçip kopyala.'; }
+      document.body.removeChild(ta);
+    }
+  }
+  function openDlg(e) {
+    if (!dlg || typeof dlg.showModal !== 'function' || !current) return; // pencere yoksa normal mailto çalışır
+    e.preventDefault();
+    var text = 'Konu: ' + current.subject + '\n\n' + current.body;
+    $('bzDlgText').value = text;
+    $('bzDlgOk').textContent = '';
+    $('bzMailto').setAttribute('href', 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(current.subject) + '&body=' + encodeURIComponent(current.body));
+    $('bzGmail').setAttribute('href', 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(EMAIL) +
+      '&su=' + encodeURIComponent(current.subject) + '&body=' + encodeURIComponent(current.body));
+    dlg.showModal();
+  }
+  if (dlg) {
+    el.cta.addEventListener('click', openDlg);
+    el.bottomCta.addEventListener('click', openDlg);
+    $('bzDlgClose').addEventListener('click', function () { dlg.close(); });
+    dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+    $('bzCopy').addEventListener('click', function () { copyText($('bzDlgText').value, 'Metin kopyalandı ✓ E-postana yapıştırabilirsin.'); });
+    $('bzCopyAddr').addEventListener('click', function () { copyText(EMAIL, 'Adres kopyalandı ✓'); });
+  }
+  var cc = $('bzCopyContact');
+  if (cc) cc.addEventListener('click', function () {
+    var label = cc.textContent;
+    function ok() { cc.textContent = 'Adres kopyalandı ✓'; setTimeout(function () { cc.textContent = label; }, 3000); }
+    if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(EMAIL).then(ok); return; }
+    var ta = document.createElement('textarea'); ta.value = EMAIL; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); ok(); } catch (e) { /* adres zaten ekranda */ } document.body.removeChild(ta);
+  });
 
   /* ---- hazır kombinasyonlar ---- */
   function applyPreset(kind) {
