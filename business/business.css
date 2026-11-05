@@ -72,22 +72,6 @@ main, .bz-nav-inner, .bz-footer { width: min(1120px, 100% - 32px); margin-inline
 .bz-presets button:hover { background: var(--surface-2); color: var(--ink); }
 .bz-presets button.on { background: var(--ink); color: var(--ink-dark); }
 
-.bz-types { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
-.bz-type { position: relative; display: block; cursor: pointer; }
-.bz-type input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; }
-.bz-type-body { display: block; height: 100%; padding: 16px; border: 2px solid var(--line); border-radius: 8px; background: var(--surface); transition: transform .18s, border-color .18s, background .18s, box-shadow .18s; }
-.bz-type:hover .bz-type-body { transform: translateY(-3px); border-color: rgba(245, 236, 217, 0.5); }
-.bz-type input:focus-visible + .bz-type-body { outline: 3px solid var(--yellow); outline-offset: 3px; }
-.bz-type input:checked + .bz-type-body { border-color: var(--ink); background: var(--surface-2); box-shadow: 4px 4px 0 var(--ink); transform: translate(-2px, -2px); }
-.bz-type-ico { display: block; width: 30px; height: 30px; margin-bottom: 10px; }
-.bz-type-ico svg { width: 100%; height: 100%; fill: none; stroke: var(--teal); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; transition: stroke .18s; }
-.bz-type input:checked + .bz-type-body .bz-type-ico svg { stroke: var(--yellow); }
-.bz-type-name { display: block; font-weight: 800; line-height: 1.25; }
-.bz-type-desc { display: block; margin-top: 4px; color: var(--dim); font-size: 0.85rem; line-height: 1.4; }
-.bz-type-from { display: block; margin-top: 10px; font: 800 0.8rem var(--sans); color: var(--yellow); }
-.bz-tick { position: absolute; top: 10px; right: 10px; width: 22px; height: 22px; border-radius: 50%; background: var(--yellow); display: grid; place-items: center; transform: scale(0); transition: transform .22s cubic-bezier(.3, 1.6, .5, 1); pointer-events: none; }
-.bz-tick svg { width: 14px; height: 14px; fill: none; stroke: var(--ink-dark); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
-.bz-type input:checked ~ .bz-tick { transform: scale(1); }
 
 .bz-opts { display: grid; gap: 10px; }
 .bz-opt, .bz-rush { position: relative; display: flex; align-items: center; gap: 14px; padding: 14px 16px; border: 2px solid var(--line); border-radius: 8px; background: var(--surface); cursor: pointer; transition: border-color .18s, background .18s, transform .18s; }
@@ -374,3 +358,32 @@ input:checked ~ .bz-box svg, input:checked + .bz-box svg { stroke-dashoffset: 0;
   .art *, .svc-panel, .svc-prog { animation: none !important; }
   .flow::after { transition: none; }
 }
+
+
+/* ===================== PROJE TİPİ KARTLARI ===================== */
+.bz-types { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.bz-type { position: relative; display: block; cursor: pointer; grid-column: span 2; }
+.bz-type:nth-child(n+4) { grid-column: span 3; }
+.bz-type input { position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer; z-index: 2; }
+.bz-type-body { position: relative; display: flex; flex-direction: column; height: 100%; overflow: hidden; border: 2px solid var(--line); border-radius: 12px; background: var(--surface); transition: transform .22s cubic-bezier(.3, 1.4, .5, 1), border-color .2s, box-shadow .2s, background .2s; }
+.bz-type:hover .bz-type-body { transform: translateY(-5px); border-color: color-mix(in srgb, var(--ac) 70%, var(--ink)); box-shadow: 0 12px 28px -14px color-mix(in srgb, var(--ac) 60%, transparent); }
+.bz-type input:focus-visible + .bz-type-body { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.bz-type input:checked + .bz-type-body { border-color: var(--ac); background: var(--surface-2); box-shadow: 0 0 0 2px var(--ac), 6px 6px 0 color-mix(in srgb, var(--ac) 55%, #000); transform: translate(-2px, -3px); }
+.bz-type-art { position: relative; display: block; height: 128px; padding: 10px 14px; overflow: hidden; border-bottom: 2px solid var(--line);
+  background: radial-gradient(ellipse at 50% 120%, color-mix(in srgb, var(--ac) 30%, transparent), transparent 70%), repeating-linear-gradient(90deg, rgba(245, 236, 217, 0.04) 0 1px, transparent 1px 22px), #1b160f; transition: border-color .2s; }
+.bz-type input:checked + .bz-type-body .bz-type-art { border-bottom-color: var(--ac); }
+.bz-type-art .art { height: 100%; width: auto; margin: 0 auto; opacity: 0.62; transform: scale(0.96); transition: opacity .25s, transform .3s; }
+.bz-type:hover .bz-type-art .art, .bz-type input:checked + .bz-type-body .bz-type-art .art { opacity: 1; transform: scale(1.03); }
+.bz-type-fallback { width: 44px; height: 44px; fill: none; stroke: var(--ac); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; margin: 30px auto 0; display: block; }
+.bz-type-info { display: block; padding: 14px 16px 0; flex: 1; }
+.bz-type-name { display: block; font-weight: 800; font-size: 1.05rem; line-height: 1.25; }
+.bz-type-desc { display: block; margin-top: 4px; color: var(--dim); font-size: 0.84rem; line-height: 1.45; }
+.bz-type-price { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 14px 16px 14px; padding-top: 12px; border-top: 1px dashed var(--line); }
+.bz-type-price small { color: var(--dim); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.bz-type-price b { font: 700 1.55rem/1 var(--hand); color: var(--ac); font-variant-numeric: tabular-nums; }
+.bz-tick { position: absolute; top: 10px; right: 10px; z-index: 3; width: 26px; height: 26px; border-radius: 50%; background: var(--ac); display: grid; place-items: center; transform: scale(0) rotate(-90deg); transition: transform .3s cubic-bezier(.3, 1.7, .5, 1); pointer-events: none; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4); }
+.bz-tick svg { width: 15px; height: 15px; fill: none; stroke: var(--ink-dark); stroke-width: 3.2; stroke-linecap: round; stroke-linejoin: round; }
+.bz-type input:checked ~ .bz-tick { transform: scale(1) rotate(0); }
+@media (max-width: 1100px) and (min-width: 921px) { .bz-types { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bz-type, .bz-type:nth-child(n+4) { grid-column: auto; } .bz-type:last-child { grid-column: 1 / -1; } }
+@media (max-width: 640px) { .bz-types { grid-template-columns: 1fr; } .bz-type, .bz-type:nth-child(n+4) { grid-column: auto; } .bz-type-art { height: 112px; } }
+@media (prefers-reduced-motion: reduce) { .bz-type-art .art { transition: none; } }

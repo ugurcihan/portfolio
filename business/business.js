@@ -100,12 +100,19 @@
   }
 
   /* ---- çizim ---- */
+  // kart çizimleri: hizmet vitrinindeki canlı illüstrasyonların kopyası (kurumsal, startup, e-ticaret, mobil, yazılım)
+  var ART_PANEL = { kurumsal: 0, startup: 1, eticaret: 2, mobil: 3, yazilim: 4 };
+  var ACCENT = { kurumsal: '#2fb8a6', startup: '#ff7a5c', eticaret: '#ffcf56', mobil: '#2fb8a6', yazilim: '#ff7a5c' };
+  function artFor(t) {
+    var s = document.querySelector('#svcPanel' + ART_PANEL[t.id] + ' .art');
+    return s ? s.outerHTML : '<svg viewBox="0 0 24 24" class="bz-type-fallback" aria-hidden="true">' + t.icon + '</svg>';
+  }
   function renderTypes() {
     el.types.innerHTML = TYPES.map(function (t) {
-      return '<label class="bz-type"><input type="radio" name="ptype" value="' + t.id + '"' + (t.id === state.type ? ' checked' : '') + '>' +
-        '<span class="bz-type-body"><span class="bz-type-ico"><svg viewBox="0 0 24 24" aria-hidden="true">' + t.icon + '</svg></span>' +
-        '<span class="bz-type-name">' + t.name + '</span><span class="bz-type-desc">' + t.desc + '</span>' +
-        '<span class="bz-type-from">' + tl(t.base) + '’den başlayan</span></span>' +
+      return '<label class="bz-type" style="--ac:' + ACCENT[t.id] + '"><input type="radio" name="ptype" value="' + t.id + '"' + (t.id === state.type ? ' checked' : '') + '>' +
+        '<span class="bz-type-body"><span class="bz-type-art">' + artFor(t) + '</span>' +
+        '<span class="bz-type-info"><span class="bz-type-name">' + t.name + '</span><span class="bz-type-desc">' + t.desc + '</span></span>' +
+        '<span class="bz-type-price"><small>başlangıç</small><b>' + tl(t.base) + '</b></span></span>' +
         '<span class="bz-tick">' + CHECK + '</span></label>';
     }).join('');
   }
