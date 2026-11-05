@@ -272,6 +272,22 @@
   });
   el.rush.addEventListener('change', function () { state.rush = el.rush.checked; update(); });
 
+  /* ---- hizmet vitrininden gelen "Fiyatını hesapla" ---- */
+  document.addEventListener('bz:select', function (e) {
+    var d = e.detail || {};
+    if (!typeOf(d.type)) return;
+    state.type = d.type;
+    state.picked = {};
+    (d.add || []).forEach(function (id) {
+      var a = ADDONS.filter(function (x) { return x.id === id; })[0];
+      if (a && priceOf(a, state.type) !== null) state.picked[id] = true;
+    });
+    renderTypes();
+    renderOpts(true);
+    update();
+    el.calc.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  });
+
   // mobil alt çubuk: hesaplayıcı görünürken göster
   if (window.IntersectionObserver && el.bottom) {
     new IntersectionObserver(function (entries) {

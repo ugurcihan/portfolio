@@ -75,13 +75,15 @@
 
     var root = document.createElement('div');
     root.className = 'pr-root';
+    // Turkish pages (the /business/ page) get Turkish defaults; on the home page i18n.js overrides these anyway
+    var tr = /^tr/i.test(document.documentElement.lang || '');
     root.innerHTML =
       DEFS +
-      '<h3 class="grp-label"><span data-i18n="rail_label">Featured work</span></h3>' +
-      '<div class="pr-stage" role="group" aria-label="Featured projects"><div class="pr-rail" aria-hidden="true"></div></div>' +
+      '<h3 class="grp-label"><span data-i18n="rail_label">' + (tr ? 'Öne çıkan işler' : 'Featured work') + '</span></h3>' +
+      '<div class="pr-stage" role="group" aria-label="' + (tr ? 'Öne çıkan projeler' : 'Featured projects') + '"><div class="pr-rail" aria-hidden="true"></div></div>' +
       '<div class="pr-caption" aria-live="polite"><h4 class="pr-cap-title"></h4><p class="pr-cap-tag"></p>' +
-      '<button type="button" class="pr-cap-open" data-i18n="rail_open">Open preview ↗</button></div>' +
-      '<p class="pr-hint" data-i18n="rail_hint">Hover a card to turn it · click to open</p>';
+      '<button type="button" class="pr-cap-open" data-i18n="rail_open">' + (tr ? 'Önizlemeyi aç ↗' : 'Open preview ↗') + '</button></div>' +
+      '<p class="pr-hint" data-i18n="rail_hint">' + (tr ? 'Kartın üstüne gel ya da kaydır, dönsün · açmak için tıkla' : 'Hover a card to turn it · click to open') + '</p>';
     grid.parentNode.insertBefore(root, grid);
 
     // The rail replaces these cards on screen. They stay in the DOM (hidden): the rail reads their text
