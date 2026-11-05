@@ -80,6 +80,8 @@ main, .nav { position: relative; z-index: 1; }
 .nav-links { display: flex; gap: 26px; }
 .nav-links a { color: var(--dim); text-decoration: none; font-size: 0.92rem; font-weight: 600; }
 .nav-links a:hover { color: var(--coral); }
+.nav-links a.nav-biz { color: var(--yellow); font-weight: 800; }
+.nav-links a.nav-biz::after { content: " ↗"; font-size: 0.8em; }
 .nav-right { display: flex; align-items: center; gap: 14px; }
 .nav-toggle {
   display: none; flex-direction: column; justify-content: center; gap: 5px;

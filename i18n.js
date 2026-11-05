@@ -7,6 +7,7 @@ const translations = {
     nav_projects: "Projects",
     nav_stack: "Stack",
     nav_contact: "Contact",
+    nav_business: "Business",
     nav_press: "Press",
 
     hero_greeting: "hi, I'm 👋",
@@ -142,6 +143,7 @@ const translations = {
     nav_projects: "Projeler",
     nav_stack: "Teknoloji",
     nav_contact: "İletişim",
+    nav_business: "Business",
     nav_press: "Basın",
 
     hero_greeting: "merhaba, ben 👋",
